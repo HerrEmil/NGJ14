@@ -3,12 +3,12 @@ using System.Collections;
 
 public class FinishGameOnTrigger : MonoBehaviour
 {
-	public GUIText BrowserHistoryGui;
+	public GUITexture BrowserHistoryGui;
 
 	// Use this for initialization
 	void OnTriggerEnter(Collider other)
 	{
-		BrowserHistoryGui.text = Resources.Load<TextAsset>("BrowserHistory/urls").text;
+		BrowserHistoryGui.texture = Resources.Load<Texture>("BrowserHistory/watchKittens");
 		BrowserHistoryGui.gameObject.SetActive(true);
 	}
 }
