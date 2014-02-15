@@ -95,7 +95,7 @@ public class Fly : Controller {
 	}
 //
 	void OnGUI () {
-		GUI.Label(new Rect(0,0,200,50),accelerationString);
+		GUI.Label(new Rect(0,0,500,50),accelerationString);
 	}
 
 	void OnCollisionEnter (Collision c) {
