@@ -1,16 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ShowGameStatistics : MonoBehaviour {
-
-	public GUIText collectibles;
-
+public class ShowGameover : MonoBehaviour {
+	
+	public GUIText message;
+	
 	void Start () 
 	{
-		collectibles.text = "Destroyed Evidence: " + GameResult.result.collectedPickups.Count;
-		StartCoroutine (showStatistics(collectibles));
+		StartCoroutine (showStatistics(message));
 	}
-
+	
 	private IEnumerator showStatistics(GUIText text)
 	{
 		for (var i = 0; i < 10; i++) 
