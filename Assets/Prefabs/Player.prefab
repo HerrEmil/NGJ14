@@ -848,7 +848,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0158004761, y: .0221557617, z: .148166656}
+  m_LocalPosition: {x: .015800802, y: .125264421, z: .148167416}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400070}
@@ -966,8 +966,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: .10074687, z: 0}
+  m_LocalScale: {x: .534664214, y: .534664214, z: .534664214}
   m_Children:
   - {fileID: 400004}
   - {fileID: 400022}
@@ -991,7 +991,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100028}
-  m_LocalRotation: {x: .645814419, y: -.265917629, z: .674932957, w: -.238069415}
+  m_LocalRotation: {x: .645814478, y: -.265917659, z: .674933016, w: -.2380694}
   m_LocalPosition: {x: -.00645287428, y: -.0558883213, z: .0211270507}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1003,7 +1003,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100030}
-  m_LocalRotation: {x: .869202554, y: .468643576, z: .134748444, w: .0818715766}
+  m_LocalRotation: {x: .869202614, y: .468643606, z: .134748459, w: .0818715841}
   m_LocalPosition: {x: -.0488899313, y: .0258993749, z: .0446028523}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1087,7 +1087,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .27253437, z: 0}
+  m_LocalPosition: {x: 0, y: .0622982979, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400086}
@@ -1286,7 +1286,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100078}
-  m_LocalRotation: {x: -.468643576, y: .869202554, z: .0818715766, w: -.134748444}
+  m_LocalRotation: {x: -.468643606, y: .869202614, z: .0818715841, w: -.134748459}
   m_LocalPosition: {x: -.0488899276, y: .0258995276, z: -.0446028486}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1573,7 +1573,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -1603,7 +1603,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.0188055523, y: 6.97641127e-08, z: -2.37409722e-07}
+  m_ConnectedAnchor: {x: -.0188057162, y: -8.40518624e-08, z: 2.60770321e-08}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1632,7 +1632,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.0677730069, y: -.00393445231, z: -.00911665708}
+  m_ConnectedAnchor: {x: -.0677731037, y: -.00393416919, z: -.00911678001}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1661,7 +1661,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.0656870753, y: 7.9540186e-08, z: -2.66717478e-07}
+  m_ConnectedAnchor: {x: -.0656870306, y: 1.7817365e-07, z: 3.19909304e-07}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1787,9 +1787,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c623240fe9b66d9468e4be7f97ea321d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalSpeed: 4
-  boostSpeed: 8
-  accelerationString: 
+  normalSpeed: 5
+  boostSpeed: 9
+  hRotationSpeed: 5
+  vRotationSpeed: 3
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1803,7 +1804,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   followObject: {fileID: 100024}
   smoothness: 3
-  rotationSmoothness: 10
+  rotationSmoothness: 3
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1
