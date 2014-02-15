@@ -28,4 +28,7 @@ public class Laser : MonoBehaviour {
 			smoke.gameObject.SetActive(false);
 		}
 	}
+	void OnDisable () {
+		smoke.gameObject.SetActive(false);
+	}
 }
