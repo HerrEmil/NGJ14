@@ -1,0 +1,520 @@
+fileFormatVersion: 2
+guid: 28adc11175b49dd439683bab0baaf563
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: center_bnd_jnt
+    100002: //RootNode
+    100004: fly_GEO
+    100006: head_end_jnt
+    100008: L_backLeg01_bnd_jnt
+    100010: L_backLeg02_bnd_jnt
+    100012: L_backLeg03_bnd_jnt
+    100014: L_backLeg04_bnd_jnt
+    100016: L_backLeg05_end_jnt
+    100018: L_frontLeg01_bnd_jnt
+    100020: L_frontLeg02_bnd_jnt
+    100022: L_frontLeg03_bnd_jnt
+    100024: L_frontLeg04_bnd_jnt
+    100026: L_frontLeg05_end_jnt
+    100028: L_middelLeg01_bnd_jnt
+    100030: L_middelLeg02_bnd_jnt
+    100032: L_middelLeg03_bnd_jnt
+    100034: L_middelLeg04_bnd_jnt
+    100036: L_middelLeg05_end_jnt
+    100038: L_wing_flap_bnd_jnt
+    100040: L_wing_rotate_bnd_jnt
+    100042: neck_bnd_jnt
+    100044: R_backLeg01_bnd_jnt
+    100046: R_backLeg02_bnd_jnt
+    100048: R_backLeg03_bnd_jnt
+    100050: R_backLeg04_bnd_jnt
+    100052: R_backLeg05_end_jnt
+    100054: R_frontLeg01_bnd_jnt
+    100056: R_frontLeg02_bnd_jnt
+    100058: R_frontLeg03_bnd_jnt
+    100060: R_frontLeg04_bnd_jnt
+    100062: R_frontLeg05_end_jnt
+    100064: R_middelLeg01_bnd_jnt
+    100066: R_middelLeg02_bnd_jnt
+    100068: R_middelLeg03_bnd_jnt
+    100070: R_middelLeg04_bnd_jnt
+    100072: R_middelLeg05_end_jnt
+    100074: R_wing_flap_bnd_jnt
+    100076: R_wing_rotate_bnd_jnt
+    100078: scaleHere
+    100080: spine_01_bnd_jnt
+    100082: spine_02_bnd_jnt
+    100084: spine_03_bnd_jnt
+    100086: spine_04_end_jnt
+    100088: wing_end_jnt
+    100090: wing_end_jnt 1
+    100092: world_zero_jnt
+    400000: center_bnd_jnt
+    400002: //RootNode
+    400004: fly_GEO
+    400006: head_end_jnt
+    400008: L_backLeg01_bnd_jnt
+    400010: L_backLeg02_bnd_jnt
+    400012: L_backLeg03_bnd_jnt
+    400014: L_backLeg04_bnd_jnt
+    400016: L_backLeg05_end_jnt
+    400018: L_frontLeg01_bnd_jnt
+    400020: L_frontLeg02_bnd_jnt
+    400022: L_frontLeg03_bnd_jnt
+    400024: L_frontLeg04_bnd_jnt
+    400026: L_frontLeg05_end_jnt
+    400028: L_middelLeg01_bnd_jnt
+    400030: L_middelLeg02_bnd_jnt
+    400032: L_middelLeg03_bnd_jnt
+    400034: L_middelLeg04_bnd_jnt
+    400036: L_middelLeg05_end_jnt
+    400038: L_wing_flap_bnd_jnt
+    400040: L_wing_rotate_bnd_jnt
+    400042: neck_bnd_jnt
+    400044: R_backLeg01_bnd_jnt
+    400046: R_backLeg02_bnd_jnt
+    400048: R_backLeg03_bnd_jnt
+    400050: R_backLeg04_bnd_jnt
+    400052: R_backLeg05_end_jnt
+    400054: R_frontLeg01_bnd_jnt
+    400056: R_frontLeg02_bnd_jnt
+    400058: R_frontLeg03_bnd_jnt
+    400060: R_frontLeg04_bnd_jnt
+    400062: R_frontLeg05_end_jnt
+    400064: R_middelLeg01_bnd_jnt
+    400066: R_middelLeg02_bnd_jnt
+    400068: R_middelLeg03_bnd_jnt
+    400070: R_middelLeg04_bnd_jnt
+    400072: R_middelLeg05_end_jnt
+    400074: R_wing_flap_bnd_jnt
+    400076: R_wing_rotate_bnd_jnt
+    400078: scaleHere
+    400080: spine_01_bnd_jnt
+    400082: spine_02_bnd_jnt
+    400084: spine_03_bnd_jnt
+    400086: spine_04_end_jnt
+    400088: wing_end_jnt
+    400090: wing_end_jnt 1
+    400092: world_zero_jnt
+    4300000: fly_GEO
+    7400000: Idle
+    7400002: Boost
+    7400004: Laser
+    9500000: //RootNode
+    13700000: fly_GEO
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 35
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: fly_GEO
+        weight: 1
+      - path: scaleHere
+        weight: 1
+      - path: scaleHere/world_zero_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_backLeg01_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_backLeg01_bnd_jnt/L_backLeg02_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_backLeg01_bnd_jnt/L_backLeg02_bnd_jnt/L_backLeg03_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_backLeg01_bnd_jnt/L_backLeg02_bnd_jnt/L_backLeg03_bnd_jnt/L_backLeg04_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_backLeg01_bnd_jnt/L_backLeg02_bnd_jnt/L_backLeg03_bnd_jnt/L_backLeg04_bnd_jnt/L_backLeg05_end_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_frontLeg01_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_frontLeg01_bnd_jnt/L_frontLeg02_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_frontLeg01_bnd_jnt/L_frontLeg02_bnd_jnt/L_frontLeg03_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_frontLeg01_bnd_jnt/L_frontLeg02_bnd_jnt/L_frontLeg03_bnd_jnt/L_frontLeg04_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_frontLeg01_bnd_jnt/L_frontLeg02_bnd_jnt/L_frontLeg03_bnd_jnt/L_frontLeg04_bnd_jnt/L_frontLeg05_end_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_middelLeg01_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_middelLeg01_bnd_jnt/L_middelLeg02_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_middelLeg01_bnd_jnt/L_middelLeg02_bnd_jnt/L_middelLeg03_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_middelLeg01_bnd_jnt/L_middelLeg02_bnd_jnt/L_middelLeg03_bnd_jnt/L_middelLeg04_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_middelLeg01_bnd_jnt/L_middelLeg02_bnd_jnt/L_middelLeg03_bnd_jnt/L_middelLeg04_bnd_jnt/L_middelLeg05_end_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_wing_rotate_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_wing_rotate_bnd_jnt/L_wing_flap_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_wing_rotate_bnd_jnt/L_wing_flap_bnd_jnt/wing_end_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/neck_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/neck_bnd_jnt/head_end_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_backLeg01_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_backLeg01_bnd_jnt/R_backLeg02_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_backLeg01_bnd_jnt/R_backLeg02_bnd_jnt/R_backLeg03_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_backLeg01_bnd_jnt/R_backLeg02_bnd_jnt/R_backLeg03_bnd_jnt/R_backLeg04_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_backLeg01_bnd_jnt/R_backLeg02_bnd_jnt/R_backLeg03_bnd_jnt/R_backLeg04_bnd_jnt/R_backLeg05_end_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_frontLeg01_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_frontLeg01_bnd_jnt/R_frontLeg02_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_frontLeg01_bnd_jnt/R_frontLeg02_bnd_jnt/R_frontLeg03_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_frontLeg01_bnd_jnt/R_frontLeg02_bnd_jnt/R_frontLeg03_bnd_jnt/R_frontLeg04_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_frontLeg01_bnd_jnt/R_frontLeg02_bnd_jnt/R_frontLeg03_bnd_jnt/R_frontLeg04_bnd_jnt/R_frontLeg05_end_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_middelLeg01_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_middelLeg01_bnd_jnt/R_middelLeg02_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_middelLeg01_bnd_jnt/R_middelLeg02_bnd_jnt/R_middelLeg03_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_middelLeg01_bnd_jnt/R_middelLeg02_bnd_jnt/R_middelLeg03_bnd_jnt/R_middelLeg04_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_middelLeg01_bnd_jnt/R_middelLeg02_bnd_jnt/R_middelLeg03_bnd_jnt/R_middelLeg04_bnd_jnt/R_middelLeg05_end_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_wing_rotate_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_wing_rotate_bnd_jnt/R_wing_flap_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_wing_rotate_bnd_jnt/R_wing_flap_bnd_jnt/wing_end_jnt
+          1
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/spine_01_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/spine_01_bnd_jnt/spine_02_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/spine_01_bnd_jnt/spine_02_bnd_jnt/spine_03_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/spine_01_bnd_jnt/spine_02_bnd_jnt/spine_03_bnd_jnt/spine_04_end_jnt
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Boost
+      takeName: Take 001
+      firstFrame: 40
+      lastFrame: 89
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: fly_GEO
+        weight: 1
+      - path: scaleHere
+        weight: 1
+      - path: scaleHere/world_zero_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_backLeg01_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_backLeg01_bnd_jnt/L_backLeg02_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_backLeg01_bnd_jnt/L_backLeg02_bnd_jnt/L_backLeg03_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_backLeg01_bnd_jnt/L_backLeg02_bnd_jnt/L_backLeg03_bnd_jnt/L_backLeg04_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_backLeg01_bnd_jnt/L_backLeg02_bnd_jnt/L_backLeg03_bnd_jnt/L_backLeg04_bnd_jnt/L_backLeg05_end_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_frontLeg01_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_frontLeg01_bnd_jnt/L_frontLeg02_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_frontLeg01_bnd_jnt/L_frontLeg02_bnd_jnt/L_frontLeg03_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_frontLeg01_bnd_jnt/L_frontLeg02_bnd_jnt/L_frontLeg03_bnd_jnt/L_frontLeg04_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_frontLeg01_bnd_jnt/L_frontLeg02_bnd_jnt/L_frontLeg03_bnd_jnt/L_frontLeg04_bnd_jnt/L_frontLeg05_end_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_middelLeg01_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_middelLeg01_bnd_jnt/L_middelLeg02_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_middelLeg01_bnd_jnt/L_middelLeg02_bnd_jnt/L_middelLeg03_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_middelLeg01_bnd_jnt/L_middelLeg02_bnd_jnt/L_middelLeg03_bnd_jnt/L_middelLeg04_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_middelLeg01_bnd_jnt/L_middelLeg02_bnd_jnt/L_middelLeg03_bnd_jnt/L_middelLeg04_bnd_jnt/L_middelLeg05_end_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_wing_rotate_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_wing_rotate_bnd_jnt/L_wing_flap_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_wing_rotate_bnd_jnt/L_wing_flap_bnd_jnt/wing_end_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/neck_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/neck_bnd_jnt/head_end_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_backLeg01_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_backLeg01_bnd_jnt/R_backLeg02_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_backLeg01_bnd_jnt/R_backLeg02_bnd_jnt/R_backLeg03_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_backLeg01_bnd_jnt/R_backLeg02_bnd_jnt/R_backLeg03_bnd_jnt/R_backLeg04_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_backLeg01_bnd_jnt/R_backLeg02_bnd_jnt/R_backLeg03_bnd_jnt/R_backLeg04_bnd_jnt/R_backLeg05_end_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_frontLeg01_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_frontLeg01_bnd_jnt/R_frontLeg02_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_frontLeg01_bnd_jnt/R_frontLeg02_bnd_jnt/R_frontLeg03_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_frontLeg01_bnd_jnt/R_frontLeg02_bnd_jnt/R_frontLeg03_bnd_jnt/R_frontLeg04_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_frontLeg01_bnd_jnt/R_frontLeg02_bnd_jnt/R_frontLeg03_bnd_jnt/R_frontLeg04_bnd_jnt/R_frontLeg05_end_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_middelLeg01_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_middelLeg01_bnd_jnt/R_middelLeg02_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_middelLeg01_bnd_jnt/R_middelLeg02_bnd_jnt/R_middelLeg03_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_middelLeg01_bnd_jnt/R_middelLeg02_bnd_jnt/R_middelLeg03_bnd_jnt/R_middelLeg04_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_middelLeg01_bnd_jnt/R_middelLeg02_bnd_jnt/R_middelLeg03_bnd_jnt/R_middelLeg04_bnd_jnt/R_middelLeg05_end_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_wing_rotate_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_wing_rotate_bnd_jnt/R_wing_flap_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_wing_rotate_bnd_jnt/R_wing_flap_bnd_jnt/wing_end_jnt
+          1
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/spine_01_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/spine_01_bnd_jnt/spine_02_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/spine_01_bnd_jnt/spine_02_bnd_jnt/spine_03_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/spine_01_bnd_jnt/spine_02_bnd_jnt/spine_03_bnd_jnt/spine_04_end_jnt
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Laser
+      takeName: Take 001
+      firstFrame: 90
+      lastFrame: 103
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: fly_GEO
+        weight: 1
+      - path: scaleHere
+        weight: 1
+      - path: scaleHere/world_zero_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_backLeg01_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_backLeg01_bnd_jnt/L_backLeg02_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_backLeg01_bnd_jnt/L_backLeg02_bnd_jnt/L_backLeg03_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_backLeg01_bnd_jnt/L_backLeg02_bnd_jnt/L_backLeg03_bnd_jnt/L_backLeg04_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_backLeg01_bnd_jnt/L_backLeg02_bnd_jnt/L_backLeg03_bnd_jnt/L_backLeg04_bnd_jnt/L_backLeg05_end_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_frontLeg01_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_frontLeg01_bnd_jnt/L_frontLeg02_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_frontLeg01_bnd_jnt/L_frontLeg02_bnd_jnt/L_frontLeg03_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_frontLeg01_bnd_jnt/L_frontLeg02_bnd_jnt/L_frontLeg03_bnd_jnt/L_frontLeg04_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_frontLeg01_bnd_jnt/L_frontLeg02_bnd_jnt/L_frontLeg03_bnd_jnt/L_frontLeg04_bnd_jnt/L_frontLeg05_end_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_middelLeg01_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_middelLeg01_bnd_jnt/L_middelLeg02_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_middelLeg01_bnd_jnt/L_middelLeg02_bnd_jnt/L_middelLeg03_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_middelLeg01_bnd_jnt/L_middelLeg02_bnd_jnt/L_middelLeg03_bnd_jnt/L_middelLeg04_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_middelLeg01_bnd_jnt/L_middelLeg02_bnd_jnt/L_middelLeg03_bnd_jnt/L_middelLeg04_bnd_jnt/L_middelLeg05_end_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_wing_rotate_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_wing_rotate_bnd_jnt/L_wing_flap_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/L_wing_rotate_bnd_jnt/L_wing_flap_bnd_jnt/wing_end_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/neck_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/neck_bnd_jnt/head_end_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_backLeg01_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_backLeg01_bnd_jnt/R_backLeg02_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_backLeg01_bnd_jnt/R_backLeg02_bnd_jnt/R_backLeg03_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_backLeg01_bnd_jnt/R_backLeg02_bnd_jnt/R_backLeg03_bnd_jnt/R_backLeg04_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_backLeg01_bnd_jnt/R_backLeg02_bnd_jnt/R_backLeg03_bnd_jnt/R_backLeg04_bnd_jnt/R_backLeg05_end_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_frontLeg01_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_frontLeg01_bnd_jnt/R_frontLeg02_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_frontLeg01_bnd_jnt/R_frontLeg02_bnd_jnt/R_frontLeg03_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_frontLeg01_bnd_jnt/R_frontLeg02_bnd_jnt/R_frontLeg03_bnd_jnt/R_frontLeg04_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_frontLeg01_bnd_jnt/R_frontLeg02_bnd_jnt/R_frontLeg03_bnd_jnt/R_frontLeg04_bnd_jnt/R_frontLeg05_end_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_middelLeg01_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_middelLeg01_bnd_jnt/R_middelLeg02_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_middelLeg01_bnd_jnt/R_middelLeg02_bnd_jnt/R_middelLeg03_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_middelLeg01_bnd_jnt/R_middelLeg02_bnd_jnt/R_middelLeg03_bnd_jnt/R_middelLeg04_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_middelLeg01_bnd_jnt/R_middelLeg02_bnd_jnt/R_middelLeg03_bnd_jnt/R_middelLeg04_bnd_jnt/R_middelLeg05_end_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_wing_rotate_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_wing_rotate_bnd_jnt/R_wing_flap_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/R_wing_rotate_bnd_jnt/R_wing_flap_bnd_jnt/wing_end_jnt
+          1
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/spine_01_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/spine_01_bnd_jnt/spine_02_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/spine_01_bnd_jnt/spine_02_bnd_jnt/spine_03_bnd_jnt
+        weight: 1
+      - path: scaleHere/world_zero_jnt/center_bnd_jnt/spine_01_bnd_jnt/spine_02_bnd_jnt/spine_03_bnd_jnt/spine_04_end_jnt
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .0500000007
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  userData: 

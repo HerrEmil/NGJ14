@@ -17,6 +17,7 @@ public class Fly : Controller {
 	public float boostSpeed;
 	public float hRotationSpeed = 1f;
 	public float vRotationSpeed = 1f;
+	public Animator animator;
 
 	// For debugging, comment out later
 //	public string accelerationString;
@@ -39,12 +40,15 @@ public class Fly : Controller {
 		if(Input.GetKeyDown(KeyCode.A)){
 			laser.gameObject.SetActive(true);
 			state = FlyState.AIM;
+			animator.SetInteger("state", 2);
 		}
 		else if(Input.GetKeyDown(KeyCode.S)){
 			state = FlyState.NORMAL;
+			animator.SetInteger("state", 0);
 		}
 		else if(Input.GetKeyDown(KeyCode.D)){
 			state = FlyState.BOOST;
+			animator.SetInteger("state", 1);
 		}
 
 		if(state != FlyState.AIM){
