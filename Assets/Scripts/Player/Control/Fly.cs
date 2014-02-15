@@ -103,5 +103,8 @@ public class Fly : Controller {
 	void OnCollisionEnter (Collision c) {
 		Debug.Log(c.gameObject.name);
 
+		Vector3 reflected = Vector3.Reflect(transform.forward, c.contacts[0].normal);
+		transform.forward = (Quaternion.AngleAxis(Vector3.Angle(transform.forward, reflected), Vector3.Cross(transform.forward, reflected)) * transform.forward).normalized;
+
 	}
 }
