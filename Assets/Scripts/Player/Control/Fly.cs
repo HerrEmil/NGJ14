@@ -59,6 +59,11 @@ public class Fly : Controller {
 //		transform.Translate(transform.forward * speed);
 		float mx = Input.GetAxis("Mouse X");
 		float my = Input.GetAxis("Mouse Y");
+
+		// Comment out mx and my above and uncomment below before building mobile version
+//		float mx = Input.acceleration.x;
+//		float my = -Input.acceleration.y;
+//		my -= 0.6f;
 		
 //		rigidbody.AddRelativeTorque(my * Time.deltaTime, mx * Time.deltaTime, 0f);
 		float angle =Vector3.Angle(transform.forward, Vector3.up);
