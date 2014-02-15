@@ -15,9 +15,11 @@ public class Fly : Controller {
 
 	public float normalSpeed;
 	public float boostSpeed;
+	public float hRotationSpeed = 1f;
+	public float vRotationSpeed = 1f;
 
 	// For debugging, comment out later
-	public string accelerationString;
+//	public string accelerationString;
 
 	float speed;
 	FlyState state;
@@ -69,18 +71,18 @@ public class Fly : Controller {
 //		my -= 0.6f;
 
 		// Needed for on-screen print of acceleration
-		Rect rect = new Rect(10, 10, 50, 50);
-		accelerationString = "Device acceleration (" + Input.acceleration.x + ", " + Input.acceleration.y + ", " + Input.acceleration.z + ")";
+//		Rect rect = new Rect(10, 10, 50, 50);
+//		accelerationString = "Device acceleration (" + Input.acceleration.x + ", " + Input.acceleration.y + ", " + Input.acceleration.z + ")";
 		
 //		rigidbody.AddRelativeTorque(my * Time.deltaTime, mx * Time.deltaTime, 0f);
 		float angle =Vector3.Angle(transform.forward, Vector3.up);
 		if(angle > 30 && my > 0){
-			transform.forward = Quaternion.AngleAxis(-my, transform.right) * transform.forward;
+			transform.forward = Quaternion.AngleAxis(-my * vRotationSpeed, transform.right) * transform.forward;
 		}
 		else if(angle < 150 && my < 0){
-			transform.forward = Quaternion.AngleAxis(-my, transform.right) * transform.forward;
+			transform.forward = Quaternion.AngleAxis(-my * vRotationSpeed, transform.right) * transform.forward;
 		}
-		transform.forward = (Quaternion.AngleAxis(mx, Vector3.up) * transform.forward).normalized;
+		transform.forward = (Quaternion.AngleAxis(mx * hRotationSpeed, Vector3.up) * transform.forward).normalized;
 		rigidbody.velocity = transform.forward * speed;
 
 		//Prevent random rotation after hitting other colliders
@@ -94,9 +96,9 @@ public class Fly : Controller {
 
 	}
 //
-	void OnGUI () {
-		GUI.Label(new Rect(0,0,500,50),accelerationString);
-	}
+//	void OnGUI () {
+//		GUI.Label(new Rect(0,0,500,50),accelerationString);
+//	}
 
 	void OnCollisionEnter (Collision c) {
 		Debug.Log(c.gameObject.name);
