@@ -8,7 +8,7 @@ public class FinishGameOnTrigger : MonoBehaviour
 	// Use this for initialization
 	void OnTriggerEnter(Collider other)
 	{
-		BrowserHistoryGui.text = Resources.Load<TextAsset>("BrowserHistory").text;
+		BrowserHistoryGui.text = Resources.Load<TextAsset>("BrowserHistory/urls").text;
 		BrowserHistoryGui.gameObject.SetActive(true);
 	}
 }
