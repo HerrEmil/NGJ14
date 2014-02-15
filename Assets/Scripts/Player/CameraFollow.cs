@@ -6,6 +6,7 @@ public class CameraFollow : MonoBehaviour {
 
 	public GameObject followObject;
 	public float smoothness = 10f;
+	public float rotationSmoothness = 10f;
 	
 	[Inject]
 	Controller plane;
@@ -18,9 +19,9 @@ public class CameraFollow : MonoBehaviour {
 	void FixedUpdate () {
 		transform.position = Vector3.Lerp(transform.position, followObject.transform.position - (followObject.transform.position - transform.position).normalized * 1f, Time.deltaTime * smoothness);
 		
-		transform.LookAt(plane.transform.position);
+//		transform.LookAt(plane.transform.position);
 
-		transform.rotation = Quaternion.Lerp(transform.rotation, followObject.transform.rotation, 0.2f * Time.deltaTime);
+		transform.rotation = Quaternion.Lerp(transform.rotation, followObject.transform.rotation, rotationSmoothness * Time.deltaTime);
 //		transform.rotation = followObject.transform.rotation;
 	}
 }
