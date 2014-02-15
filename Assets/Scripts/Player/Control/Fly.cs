@@ -68,7 +68,7 @@ public class Fly : Controller {
 		// Comment out mx and my above and uncomment below before building mobile version
 //		float mx = Input.acceleration.x;
 //		float my = -Input.acceleration.y;
-//		my -= 0.6f;
+//		my -= 0.5f;
 
 		// Needed for on-screen print of acceleration
 //		Rect rect = new Rect(10, 10, 50, 50);
@@ -102,6 +102,9 @@ public class Fly : Controller {
 
 	void OnCollisionEnter (Collision c) {
 		Debug.Log(c.gameObject.name);
+
+		Vector3 reflected = Vector3.Reflect(transform.forward, c.contacts[0].normal);
+		transform.forward = (Quaternion.AngleAxis(Vector3.Angle(transform.forward, reflected), Vector3.Cross(transform.forward, reflected)) * transform.forward).normalized;
 
 	}
 }
