@@ -18,6 +18,11 @@ public class Laser : MonoBehaviour {
 		if(isHit){
 			smoke.gameObject.SetActive(true);
 			smoke.position = hitInfo.point;
+
+			LaserInteractable interactable = hitInfo.collider.GetComponent<LaserInteractable>();
+			if(interactable){
+				interactable.SendMessage("Interact");
+			}
 		}
 		else{
 			smoke.gameObject.SetActive(false);

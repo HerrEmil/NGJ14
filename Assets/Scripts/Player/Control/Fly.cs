@@ -49,11 +49,11 @@ public class Fly : Controller {
 		if(state == FlyState.BOOST){
 			speed = Mathf.Lerp(speed, boostSpeed, Time.deltaTime);
 		}
-		if(state == FlyState.NORMAL){
+		else if(state == FlyState.NORMAL){
 			speed = Mathf.Lerp(speed, normalSpeed, Time.deltaTime);
 		}
-		if(state == FlyState.AIM){
-			speed = Mathf.Lerp(speed, 0, Time.deltaTime);
+		else if(state == FlyState.AIM){
+			speed = Mathf.Lerp(speed, 0, Time.deltaTime*3);
 		}
 
 //		transform.Translate(transform.forward * speed);

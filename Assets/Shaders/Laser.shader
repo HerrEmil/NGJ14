@@ -22,6 +22,7 @@
 			half4 c = tex2D (_AlphaTex, IN.uv_AlphaTex + float2(_Time.x, _Time.z));
 			o.Albedo = _BaseColor.rgb;
 			o.Alpha = c.a * _BaseColor.a;
+			o.Emission = _BaseColor.rgb;
 		}
 		ENDCG
 	} 
