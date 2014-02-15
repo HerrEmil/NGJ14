@@ -72,7 +72,7 @@ public class Fly : Controller {
 		// Comment out mx and my above and uncomment below before building mobile version
 //		float mx = Input.acceleration.x;
 //		float my = -Input.acceleration.y;
-//		my -= 0.6f;
+//		my -= 0.5f;
 
 		// Needed for on-screen print of acceleration
 //		Rect rect = new Rect(10, 10, 50, 50);

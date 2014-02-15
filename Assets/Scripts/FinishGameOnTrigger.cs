@@ -1,10 +1,16 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 using System.Collections;
+using ModestTree.Zenject;
 
 public class FinishGameOnTrigger : MonoBehaviour
 {
 	public GUITexture endScreenGui;
-	public MusicController musicController;
+	
+	[Inject]
+	private AudioSource gameMusic;
+	[Inject]
+	private GameController gameController;
 
 
 	// Use this for initialization
@@ -12,6 +18,7 @@ public class FinishGameOnTrigger : MonoBehaviour
 	{
 		endScreenGui.texture = Resources.Load<Texture>("BrowserHistory/watchKittens");
 		endScreenGui.gameObject.SetActive(true);
-		musicController.PlayWinAudio();
+		gameController.isFinished = true;
 	}
+
 }
