@@ -33,7 +33,7 @@ public class GameController : IEntryPoint, ITickable
 	{
 		if (isFinished)
 		{
-			Application.LoadLevel("Finish");
+			Application.LoadLevel("Win");
 		}
 	}
 
