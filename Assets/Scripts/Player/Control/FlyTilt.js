@@ -1,7 +1,7 @@
 ﻿#pragma strict
 
 // Move object using accelerometer
-var speed = 10.0;
+var speed = 1.0;
 
 function Start () {
 
