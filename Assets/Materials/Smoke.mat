@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Laser
-  m_Shader: {fileID: 4800000, guid: a5dd34e5ca7c96744a7e6f8845c13cd2, type: 3}
+  m_Name: Smoke
+  m_Shader: {fileID: 203, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -17,17 +17,14 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: a994a0571cab4f742a060e033b266248, type: 3}
+          m_Texture: {fileID: 2800000, guid: 9f0fca5931083984c918327385f53507, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+    m_Floats:
       data:
         first:
-          name: _AlphaTex
-        second:
-          m_Texture: {fileID: 2800000, guid: a994a0571cab4f742a060e033b266248, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-    m_Floats: {}
+          name: _InvFade
+        second: 1
     m_Colors:
       data:
         first:
@@ -35,5 +32,5 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _BaseColor
-        second: {r: 1, g: .0620689765, b: 0, a: .894117653}
+          name: _TintColor
+        second: {r: .5, g: .5, b: .5, a: .5}

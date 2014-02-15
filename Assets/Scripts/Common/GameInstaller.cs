@@ -6,6 +6,7 @@ public class GameInstaller : MonoBehaviour, IInstaller
 {
 	public Camera mainCamera;
 	public Controller controller;
+	public Laser laser;
 
 	public void RegisterBindings(DiContainer container)
 	{
@@ -16,6 +17,7 @@ public class GameInstaller : MonoBehaviour, IInstaller
 	    container.Bind<Camera>().AsSingle(mainCamera);
 
 		container.Bind<Controller>().AsSingle(controller);
+		container.Bind<Laser>().AsSingle(laser);
 
 	    container.Bind<IEntryPoint>().AsSingle<GameController>();
 	    container.Bind<ITickable>().AsSingle<GameController>();

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using ModestTree.Zenject;
 
 
 enum FlyState {
@@ -18,6 +19,9 @@ public class Fly : Controller {
 	float speed;
 	FlyState state;
 
+	[Inject]
+	Laser laser;
+
 	// Use this for initialization
 	void Start () {
 		speed = boostSpeed;
@@ -28,6 +32,7 @@ public class Fly : Controller {
 	void FixedUpdate () {
 		
 		if(Input.GetKeyDown(KeyCode.A)){
+			laser.gameObject.SetActive(true);
 			state = FlyState.AIM;
 		}
 		else if(Input.GetKeyDown(KeyCode.S)){
@@ -35,6 +40,10 @@ public class Fly : Controller {
 		}
 		else if(Input.GetKeyDown(KeyCode.D)){
 			state = FlyState.BOOST;
+		}
+
+		if(state != FlyState.AIM){
+			laser.gameObject.SetActive(false);
 		}
 
 		if(state == FlyState.BOOST){
@@ -52,8 +61,13 @@ public class Fly : Controller {
 		float my = Input.GetAxis("Mouse Y");
 		
 //		rigidbody.AddRelativeTorque(my * Time.deltaTime, mx * Time.deltaTime, 0f);
-
-		transform.forward = Quaternion.AngleAxis(-my, transform.right) * transform.forward;
+		float angle =Vector3.Angle(transform.forward, Vector3.up);
+		if(angle > 30 && my > 0){
+			transform.forward = Quaternion.AngleAxis(-my, transform.right) * transform.forward;
+		}
+		else if(angle < 150 && my < 0){
+			transform.forward = Quaternion.AngleAxis(-my, transform.right) * transform.forward;
+		}
 		transform.forward = (Quaternion.AngleAxis(mx, Vector3.up) * transform.forward).normalized;
 		rigidbody.velocity = transform.forward * speed;
 
