@@ -16,6 +16,9 @@ public class Fly : Controller {
 	public float normalSpeed;
 	public float boostSpeed;
 
+	// For debugging, comment out later
+	public string accelerationString;
+
 	float speed;
 	FlyState state;
 
@@ -64,6 +67,10 @@ public class Fly : Controller {
 //		float mx = Input.acceleration.x;
 //		float my = -Input.acceleration.y;
 //		my -= 0.6f;
+
+		// Needed for on-screen print of acceleration
+		Rect rect = new Rect(10, 10, 50, 50);
+		accelerationString = "Device acceleration (" + Input.acceleration.x + ", " + Input.acceleration.y + ", " + Input.acceleration.z + ")";
 		
 //		rigidbody.AddRelativeTorque(my * Time.deltaTime, mx * Time.deltaTime, 0f);
 		float angle =Vector3.Angle(transform.forward, Vector3.up);
@@ -85,6 +92,10 @@ public class Fly : Controller {
 //		transform.RotateAround(transform.right, -my * Time.deltaTime);
 //		transform.RotateAround(transform.up, mx * Time.deltaTime);
 
+	}
+//
+	void OnGUI () {
+		GUI.Label(new Rect(0,0,500,50),accelerationString);
 	}
 
 	void OnCollisionEnter (Collision c) {
