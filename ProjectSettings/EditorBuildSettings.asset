@@ -9,3 +9,5 @@ EditorBuildSettings:
     path: Assets/Scenes/John_Prefabs.unity
   - enabled: 1
     path: Assets/Scenes/Win.unity
+  - enabled: 1
+    path: Assets/Scenes/Lose.unity

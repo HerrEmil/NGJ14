@@ -6,6 +6,7 @@ public class GameController : IEntryPoint, ITickable
 {
 	public IList<GameObject> collectedPickups;
 	public bool isFinished;
+	public bool gameover;
 
 	public int TickPriority
 	{
@@ -31,7 +32,11 @@ public class GameController : IEntryPoint, ITickable
 
 	public void Tick()
 	{
-		if (isFinished)
+		if (gameover)
+		{
+			Application.LoadLevel("Lose");
+		}
+		else if (isFinished)
 		{
 			Application.LoadLevel("Win");
 		}
