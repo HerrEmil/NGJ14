@@ -54,7 +54,7 @@ public class Fly : Controller {
 //		rigidbody.AddRelativeTorque(my * Time.deltaTime, mx * Time.deltaTime, 0f);
 
 		transform.forward = Quaternion.AngleAxis(-my, transform.right) * transform.forward;
-		transform.forward = Quaternion.AngleAxis(mx, Vector3.up) * transform.forward;
+		transform.forward = (Quaternion.AngleAxis(mx, Vector3.up) * transform.forward).normalized;
 		rigidbody.velocity = transform.forward * speed;
 
 		//Prevent random rotation after hitting other colliders
