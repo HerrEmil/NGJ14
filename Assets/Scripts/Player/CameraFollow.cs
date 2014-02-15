@@ -8,7 +8,7 @@ public class CameraFollow : MonoBehaviour {
 	public float smoothness = 10f;
 	
 	[Inject]
-	PaperPlane plane;
+	Controller plane;
 
 	// Use this for initialization
 	void Start () {
@@ -17,7 +17,7 @@ public class CameraFollow : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		transform.position = Vector3.Lerp(transform.position, followObject.transform.position, Time.deltaTime * smoothness);
-//		transform.LookAt(plane.transform.position);
-		transform.rotation = followObject.transform.rotation;
+		transform.LookAt(plane.transform.position);
+//		transform.rotation = followObject.transform.rotation;
 	}
 }

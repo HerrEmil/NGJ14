@@ -5,7 +5,7 @@ using ModestTree.Zenject;
 public class GameInstaller : MonoBehaviour, IInstaller
 {
 	public Camera mainCamera;
-	public PaperPlane plane;
+	public Controller controller;
 
 	public void RegisterBindings(DiContainer container)
 	{
@@ -15,7 +15,7 @@ public class GameInstaller : MonoBehaviour, IInstaller
 
 	    container.Bind<Camera>().AsSingle(mainCamera);
 
-		container.Bind<PaperPlane>().AsSingle(plane);
+		container.Bind<Controller>().AsSingle(controller);
 
 	    container.Bind<IEntryPoint>().AsSingle<GameController>();
 	    container.Bind<ITickable>().AsSingle<GameController>();
