@@ -16,8 +16,11 @@ public class CameraFollow : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		transform.position = Vector3.Lerp(transform.position, followObject.transform.position, Time.deltaTime * smoothness);
+		transform.position = Vector3.Lerp(transform.position, followObject.transform.position - (followObject.transform.position - transform.position).normalized * 1f, Time.deltaTime * smoothness);
+		
 		transform.LookAt(plane.transform.position);
+
+		transform.rotation = Quaternion.Lerp(transform.rotation, followObject.transform.rotation, 0.2f * Time.deltaTime);
 //		transform.rotation = followObject.transform.rotation;
 	}
 }
