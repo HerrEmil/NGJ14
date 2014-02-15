@@ -11,9 +11,8 @@ GameObject:
   - 33: {fileID: 3300000}
   - 65: {fileID: 6500000}
   - 23: {fileID: 2300000}
-  - 114: {fileID: 11400000}
   - 54: {fileID: 5400000}
-  - 82: {fileID: 8200000}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: Pickup
   m_TagString: Pickup
@@ -153,12 +152,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fca78e6fc81b4a429165fd6c4dd8fad, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ee90592ab6351d4097f2114378be0ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotX: 15
-  rotY: 30
-  rotZ: 45
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

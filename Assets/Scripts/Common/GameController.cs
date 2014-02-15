@@ -1,9 +1,10 @@
 using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 using ModestTree.Zenject;
 
 public class GameController : IEntryPoint, ITickable
 {
+	public IList<GameObject> collectedPickups;
 
 	public int TickPriority
 	{
@@ -21,7 +22,8 @@ public class GameController : IEntryPoint, ITickable
 
 	public void Initialize()
 	{
-	    Screen.showCursor = false;
+		collectedPickups = new List<GameObject>();
+		Screen.showCursor = false;
 	    Debug.Log("Started Game");
 	}
 
@@ -32,4 +34,6 @@ public class GameController : IEntryPoint, ITickable
 	void StartGame()
 	{
 	}
+
+
 }
