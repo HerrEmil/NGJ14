@@ -27,6 +27,7 @@ public class GameController : IEntryPoint, ITickable
 		collectedPickups = new List<GameObject>();
 		isFinished = false;
 		Screen.showCursor = false;
+		GameResult.result = this;
 	    Debug.Log("Started Game");
 	}
 
