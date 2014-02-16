@@ -35,6 +35,7 @@ public class GameController : IEntryPoint, ITickable
 		isFinished = false;
 		Screen.showCursor = false;
 		GameResult.result = this;
+		extrasTotalCount = 5;
 	    Debug.Log("Started Game");
 	}
 
