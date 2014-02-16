@@ -1739,6 +1739,7 @@ MonoBehaviour:
   hRotationSpeed: 5
   vRotationSpeed: 5
   animator: {fileID: 9500000}
+  system: {fileID: 19800000, guid: 47c0a69e56e959c41bed153796f9d91d, type: 2}
   collisionCount: 0
   mousePositionString: 
   debugString: 'finger: NOT SET'
