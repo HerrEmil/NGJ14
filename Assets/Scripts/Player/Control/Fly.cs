@@ -18,6 +18,9 @@ public class Fly : Controller {
 	public float hRotationSpeed = 1f;
 	public float vRotationSpeed = 1f;
 	public Animator animator;
+	public ParticleSystem system;
+
+	public int collisionCount = 0;
 
 	// For debugging, comment out later
 	public string mousePositionString;
@@ -64,12 +67,15 @@ public class Fly : Controller {
 
 		if(state == FlyState.BOOST){
 			speed = Mathf.Lerp(speed, boostSpeed, Time.deltaTime);
+			system.enableEmission = true;
 		}
 		else if(state == FlyState.NORMAL){
 			speed = Mathf.Lerp(speed, normalSpeed, Time.deltaTime);
+			system.enableEmission = false;
 		}
 		else if(state == FlyState.AIM){
 			speed = Mathf.Lerp(speed, 0, Time.deltaTime*3);
+			system.enableEmission = false;
 		}
 
 //		transform.Translate(transform.forward * speed);
@@ -105,17 +111,18 @@ public class Fly : Controller {
 
 	void OnGUI () {
 //		string str = mousePositionString + "\n" + fingerString;
-		GUI.Label(new Rect(0,0,1000,1000),debugString);
+//		GUI.Label(new Rect(0,0,1000,1000),debugString);
+		GUI.Label(new Rect(0, 0, 200, 40), collisionCount + "");
 	}
 
 	void OnCollisionEnter (Collision c) {
-		Debug.Log(c.gameObject.name);
 
 		Vector3 reflected = Vector3.Reflect(transform.forward, c.contacts[0].normal);
 		transform.forward = (Quaternion.AngleAxis(Vector3.Angle(transform.forward, reflected), Vector3.Cross(transform.forward, reflected)) * transform.forward).normalized;
-
+		if(++collisionCount > 10){
+			Application.LoadLevel("Lose");
+		}
 	}
-
 
 	void UpdateStateMobile()
 	{
