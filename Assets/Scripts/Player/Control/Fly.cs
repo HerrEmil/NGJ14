@@ -30,88 +30,34 @@ public class Fly : Controller {
 	[Inject]
 	Laser laser;
 
+	public bool isMobile =
+	#if !UNITY_EDITOR && (UNITY_ANDROID || UNITY_IPHONE)
+			true;
+	#else
+			false;
+	#endif
+
 	// Use this for initialization
 	void Start () {
 		speed = boostSpeed;
 	}
 
 	void Update() {
-
-#if UNITY_ANDROID
-
-		// Grab touches in current frame
-		int fingerCount = 0;
-		foreach (Touch touch in Input.touches) {
-			// if (touch.phase != TouchPhase.Ended && touch.phase != TouchPhase.Canceled)
-				fingerCount++;
+		if (isMobile)
+		{
+			UpdateStateMobile();
+			mousePositionString = "";
 		}
-
-		
-		fingerString = "";
-
-		if (fingerCount > 0) {
-			print ("User has " + fingerCount + " finger(s) touching the screen");
-			fingerString = "User has " + fingerCount + " finger(s) touching the screen";
-
-			for (int i = 0; i < fingerCount; i++) {
-				if (Input.GetTouch(i).position[0] < (Screen.width / 2)) {
-					// Last tap is on left half???
-					fingerString = "Last tap: LEFT";
-					laser.gameObject.SetActive(true);
-					state = FlyState.AIM;
-					animator.SetInteger("state", 2);
-				} else {
-					// Last tap is on right half???
-					fingerString = "Last tap: RIGHT";
-					state = FlyState.BOOST;
-					animator.SetInteger("state", 1);
-				}
-				fingerString += ("\n Input.GetTouch(" + i + ").position: " + Input.GetTouch(i).position);
-			}
-		} else {
-			state = FlyState.NORMAL;
-			animator.SetInteger("state", 0);
+		else
+		{
+			UpdateStatePC();
+			fingerString = "";
 		}
-
-
-
-		for(int i = 0; i < fingerCount; i++) {
-			fingerString += ("\n Input.touches[" + i + "].phase: " + Input.touches[i].phase);
-			if(Input.touches[i].phase == TouchPhase.Began) 
-			{ 
-				lastFingerIndex = Input.touches[i].fingerId; 
-			}
-		} 
-		// Touch lastTouch = Input.touches.ToList().Find(v => v.fingerId == lastFingerIndex);
-
-		fingerString += ("\n lastFingerIndex: " + lastFingerIndex);
-		
-		
-		// When click, check position
-		// If left, laser; if right, boost
-#endif
 	}
 
 
 // Update is called once per frame
 	void FixedUpdate () {
-
-#if UNITY_EDITOR
-		if(Input.GetKeyDown(KeyCode.A)){
-			laser.gameObject.SetActive(true);
-			state = FlyState.AIM;
-			animator.SetInteger("state", 2);
-		}
-		else if(Input.GetKeyDown(KeyCode.S)){
-			state = FlyState.NORMAL;
-			animator.SetInteger("state", 0);
-		}
-		else if(Input.GetKeyDown(KeyCode.D)){
-			state = FlyState.BOOST;
-			animator.SetInteger("state", 1);
-		}
-
-#endif
 
 		if(state != FlyState.AIM){
 			laser.gameObject.SetActive(false);
@@ -128,17 +74,8 @@ public class Fly : Controller {
 		}
 
 //		transform.Translate(transform.forward * speed);
-		#if UNITY_EDITOR
-		float mx = Input.GetAxis("Mouse X");
-		float my = Input.GetAxis("Mouse Y");
-
-		#elif UNITY_ANDROID
-
-		// Comment out mx and my above and uncomment below before building mobile version
-		float mx = Input.acceleration.x;
-		float my = -Input.acceleration.y;
-		my -= 0.5f;
-		#endif
+		float mx = isMobile ? Input.acceleration.x : Input.GetAxis("Mouse X");
+		float my = isMobile ? -Input.acceleration.y - 0.5f : Input.GetAxis("Mouse Y");
 
 		// String for on-screen info
 //		mousePositionString = "Input.mousePosition (" + Input.mousePosition[0] + ", " + Input.mousePosition[1] + ")";
@@ -178,5 +115,71 @@ public class Fly : Controller {
 		Vector3 reflected = Vector3.Reflect(transform.forward, c.contacts[0].normal);
 		transform.forward = (Quaternion.AngleAxis(Vector3.Angle(transform.forward, reflected), Vector3.Cross(transform.forward, reflected)) * transform.forward).normalized;
 
+	}
+
+	void UpdateStateMobile()
+	{
+		// Grab touches in current frame
+		int fingerCount = 0;
+		foreach (Touch touch in Input.touches) {
+			// if (touch.phase != TouchPhase.Ended && touch.phase != TouchPhase.Canceled)
+			fingerCount++;
+		}
+		
+		fingerString = "";
+		
+		if (fingerCount > 0) {
+			print ("User has " + fingerCount + " finger(s) touching the screen");
+			fingerString = "User has " + fingerCount + " finger(s) touching the screen";
+			
+			for (int i = 0; i < fingerCount; i++) {
+				if (Input.GetTouch(i).position[0] < (Screen.width / 2)) {
+					// Last tap is on left half???
+					fingerString = "Last tap: LEFT";
+					laser.gameObject.SetActive(true);
+					state = FlyState.AIM;
+					animator.SetInteger("state", 2);
+				} else {
+					// Last tap is on right half???
+					fingerString = "Last tap: RIGHT";
+					state = FlyState.BOOST;
+					animator.SetInteger("state", 1);
+				}
+				fingerString += ("\n Input.GetTouch(" + i + ").position: " + Input.GetTouch(i).position);
+			}
+		} else {
+			state = FlyState.NORMAL;
+			animator.SetInteger("state", 0);
+		}
+		
+		
+		
+		for(int i = 0; i < fingerCount; i++) {
+			fingerString += ("\n Input.touches[" + i + "].phase: " + Input.touches[i].phase);
+			if(Input.touches[i].phase == TouchPhase.Began) 
+			{ 
+				lastFingerIndex = Input.touches[i].fingerId; 
+			}
+		} 
+		// Touch lastTouch = Input.touches.ToList().Find(v => v.fingerId == lastFingerIndex);
+		
+		fingerString += ("\n lastFingerIndex: " + lastFingerIndex);
+	}
+
+	void UpdateStatePC()
+	{
+		if(Input.GetKeyDown(KeyCode.A)){
+			laser.gameObject.SetActive(true);
+			state = FlyState.AIM;
+			animator.SetInteger("state", 2);
+		}
+		else if(Input.GetKeyDown(KeyCode.S)){
+			state = FlyState.NORMAL;
+			animator.SetInteger("state", 0);
+		}
+		else if(Input.GetKeyDown(KeyCode.D)){
+			state = FlyState.BOOST;
+			animator.SetInteger("state", 1);
+		}
 	}
 }
