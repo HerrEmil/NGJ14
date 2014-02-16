@@ -1,0 +1,34 @@
+=== Title ===
+Spy Fly
+
+
+=== Short teaser ===
+Spy Fly is a robot fly that uses an exploding laser that destroys private information!
+
+
+=== Description ===
+In this mission, Spy Fly is tasked with clearing a browser history that has an embarassing record of a lonely night spent in front of the computer. The client's spouse is coming home soon, reach the computer in time!
+
+Also, while rushing to get to work, some embarassing items were left scattered around the house. Destroy these items with your exploding laser to completely clear the client's name.
+
+
+=== Credits ===
+John Larsen
+Emil Andersson
+Kristijan Trajkovski
+Martin Pupkov
+Jeppe Kjærsgaard Nielsen
+
+
+=== Message to the jury ===
+PC controls:
+Steer with mouse
+Switch between fly modes by pressing A, S or D.
+A - Stop and aim laser
+S - Fly normal
+D - Boost
+
+Mobile controls:
+Steer by tilting device.
+Press and hold left side of screen to stop and aim laser.
+Press and hold right side of screen to boost.

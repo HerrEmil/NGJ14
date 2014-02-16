@@ -48,5 +48,12 @@ public class ShowGameStatistics : MonoBehaviour {
 
 		resultText.text = destroyedAll ? destroyAllResult.text : destroySomeResult.text;
 		StartCoroutine (fadeInGuiText(resultText));
+
+		while (GameResult.result.isMobile ? Input.touches.Length == 0 : !Input.GetButton("Fire1"))
+		{
+			yield return new WaitForSeconds(0.1f);
+		}
+
+		Application.LoadLevel(0);
 	}
 }
