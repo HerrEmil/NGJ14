@@ -2750,8 +2750,7 @@ MonoBehaviour:
   vRotationSpeed: 5
   animator: {fileID: 1045803504}
   mousePositionString: 
-  fingerString: 'finger: NOT SET'
-  isMobile: 0
+  debugString: 'finger: NOT SET'
 --- !u!54 &60312891
 Rigidbody:
   m_ObjectHideFlags: 0
