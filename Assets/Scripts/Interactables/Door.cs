@@ -14,6 +14,7 @@ public class Door : MonoBehaviour {
 	}
 
 	void Open () {
-
+		audio.Play();
+		animation.Play();
 	}
 }

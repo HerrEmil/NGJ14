@@ -1,13 +1,20 @@
 fileFormatVersion: 2
-guid: 892bcba74272ca64bb8ce6c609c356c2
+guid: 6c48be4621fd3b14f83f03ab90250c6d
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
     100000: //RootNode
+    100002: pCube3
+    100004: pCylinder1
     400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Door
+    400002: pCube3
+    400004: pCylinder1
+    2300000: pCube3
+    2300002: pCylinder1
+    3300000: pCube3
+    3300002: pCylinder1
+    4300000: pCube3
+    4300002: pCylinder1
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -27,7 +34,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .0250000004
+    globalScale: .0219999999
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
