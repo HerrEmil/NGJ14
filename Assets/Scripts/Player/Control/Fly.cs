@@ -112,7 +112,7 @@ public class Fly : Controller {
 	void OnGUI () {
 //		string str = mousePositionString + "\n" + fingerString;
 //		GUI.Label(new Rect(0,0,1000,1000),debugString);
-		GUI.Label(new Rect(0, 0, 200, 40), collisionCount + "");
+//		GUI.Label(new Rect(0, 0, 200, 40), collisionCount + "");
 	}
 
 	void OnCollisionEnter (Collision c) {
