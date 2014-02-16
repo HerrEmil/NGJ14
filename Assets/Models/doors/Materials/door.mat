@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: lambert1
+  m_Name: door
   m_Shader: {fileID: 2, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
@@ -17,21 +17,12 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 1735748454, guid: 96941592f3a390e4180a7f6930ec5a24,
-            type: 3}
+          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _BumpMap
-        second:
-          m_Texture: {fileID: 1260268832, guid: 96941592f3a390e4180a7f6930ec5a24,
-            type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _ParallaxMap
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -41,15 +32,11 @@ Material:
         first:
           name: _Shininess
         second: .078125
-      data:
-        first:
-          name: _Parallax
-        second: .0199999996
     m_Colors:
       data:
         first:
           name: _Color
-        second: {r: .25, g: .166176453, b: .0404411703, a: 1}
+        second: {r: .257352948, g: .115678325, b: .0832612514, a: 1}
       data:
         first:
           name: _SpecColor

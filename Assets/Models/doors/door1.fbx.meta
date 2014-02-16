@@ -1,13 +1,20 @@
 fileFormatVersion: 2
-guid: fc5d9058349fce543aa7b136eda6f8fd
+guid: b0ba3fbde27c07b49a6735514af64884
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
+    100002: pCylinder1
+    100004: polySurface2
     400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: sink_GEO
+    400002: pCylinder1
+    400004: polySurface2
+    2300000: pCylinder1
+    2300002: polySurface2
+    3300000: pCylinder1
+    3300002: polySurface2
+    4300000: polySurface2
+    4300002: pCylinder1
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -17,7 +24,7 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     optimizeGameObjects: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
@@ -27,7 +34,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 2
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1

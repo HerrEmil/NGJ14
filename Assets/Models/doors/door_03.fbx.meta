@@ -1,13 +1,20 @@
 fileFormatVersion: 2
-guid: fc5d9058349fce543aa7b136eda6f8fd
+guid: 330f9cd41823fe54b9bcfd5bb6618fb2
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
+    100002: pCube3
+    100004: pCylinder1
     400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: sink_GEO
+    400002: pCube3
+    400004: pCylinder1
+    2300000: pCube3
+    2300002: pCylinder1
+    3300000: pCube3
+    3300002: pCylinder1
+    4300000: pCube3
+    4300002: pCylinder1
     9500000: //RootNode
   materials:
     importMaterials: 1
