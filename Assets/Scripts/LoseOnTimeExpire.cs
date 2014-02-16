@@ -1,13 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
+using ModestTree.Zenject;
 
 public class LoseOnTimeExpire : MonoBehaviour 
 {
 	public float timeLimit;
-	public GUITexture endScreenGui;
 	public GUIText countDownGui;
 
 	public float remainingTime {get; private set;}
+
+	[Inject]
+	private GameController gameController;
 
 	void Start()
 	{
@@ -16,7 +19,7 @@ public class LoseOnTimeExpire : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		if (endScreenGui.gameObject.activeInHierarchy)
+		if (gameController.gameover)
 			return;
 		remainingTime = Mathf.Max(0f, remainingTime - Time.deltaTime);
 
@@ -25,8 +28,7 @@ public class LoseOnTimeExpire : MonoBehaviour
 
 		if (remainingTime <= 0)
 		{
-			endScreenGui.texture = Resources.Load<Texture>("Lose");
-			endScreenGui.gameObject.SetActive(true);
+			gameController.gameover = true;
 		}
 	}
 

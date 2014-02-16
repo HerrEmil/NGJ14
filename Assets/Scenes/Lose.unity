@@ -189,7 +189,7 @@ AudioSource:
   m_GameObject: {fileID: 1524507340}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 00a99c419a9e7fc4285bb0e7bbbec9b2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fa2578076ee80d148afb0f2475683401, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -268,7 +268,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 022732bce65cfae4e9762f7c5de7481e, type: 2}
+  - {fileID: 2100000, guid: fb7baa3028d82854a90dcd8cc672899d, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -292,6 +292,6 @@ Transform:
   m_GameObject: {fileID: 1658543657}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7.80000019, y: 8, z: 1}
+  m_LocalScale: {x: 20, y: 12, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
