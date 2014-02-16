@@ -17,19 +17,19 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 7bb7d17f960a685478d72ae6e5fd54d8, type: 3}
+          m_Texture: {fileID: 2800000, guid: 4fd4f6c48056ae244ba9a566de277194, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _BumpMap
         second:
-          m_Texture: {fileID: 2800000, guid: 37739bd38d8c0584b94dd13724474b48, type: 3}
+          m_Texture: {fileID: 2800000, guid: 401c5fc862c16be429b015e6d81b2125, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _ParallaxMap
+          name: _ToonShade
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -39,6 +39,13 @@ Material:
           name: _Ramp
         second:
           m_Texture: {fileID: 2800000, guid: 1f658b39173d33c49a4563f8428f77c3, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ParallaxMap
+        second:
+          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
