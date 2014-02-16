@@ -3,6 +3,9 @@ using System.Collections;
 
 public class LaserDoorLock : LaserInteractable {
 
+	public GameObject bar;
+//	public Door door;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -15,5 +18,6 @@ public class LaserDoorLock : LaserInteractable {
 
 	void Interact() {
 		Debug.Log("Unlocked");
+		bar.SetActive(true);
 	}
 }

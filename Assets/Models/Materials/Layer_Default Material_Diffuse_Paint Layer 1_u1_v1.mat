@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Layer_Default Material_Diffuse_Paint Layer 1_u1_v1
+  m_Shader: {fileID: 4800000, guid: 5a1afa4ec98b6ed42be6a2dc7ec9f3b5, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: e62801dc3e0152747a9f0b4a5b1045df, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BumpMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 0c77c7b766d87bc45b4a7a6d97844716, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Detail
+        second:
+          m_Texture: {fileID: 2800000, guid: e62801dc3e0152747a9f0b4a5b1045df, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Cube
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _EmissiveMap
+        second:
+          m_Texture: {fileID: 2800000, guid: d9d1d78ca8ccfee4c8a2b1ac0b0d3d51, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Shininess
+        second: .939578354
+      data:
+        first:
+          name: _EmissiveStrength
+        second: 4.26999998
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: .501960814, g: .501960814, b: .501960814, a: .501960814}
+      data:
+        first:
+          name: _SpecColor
+        second: {r: .573529422, g: .573529422, b: .573529422, a: 1}
+      data:
+        first:
+          name: _ReflectColor
+        second: {r: 1, g: 1, b: 1, a: .5}

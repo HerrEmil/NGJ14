@@ -1,0 +1,255 @@
+fileFormatVersion: 2
+guid: 457b63794c9ddd944a1d7c9f18a112da
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: Dummy01
+    100002: Dummy02
+    100004: Dummy03
+    100006: Dummy04
+    100008: Dummy05
+    100010: Dummy06
+    100012: Dummy07
+    100014: Dummy08
+    100016: Dummy09
+    100018: Dummy10
+    100020: Dummy11
+    100022: Dummy12
+    100024: Dummy13
+    100026: f5-arms
+    100028: f5-face
+    100030: f5-hair
+    100032: f5-legs
+    100034: f5-mesh
+    100036: f5-neiyi
+    100038: f5-shangyi
+    100040: f5-skirt
+    100042: f5-xie-L
+    100044: f5-xie-R
+    100046: f5Bip01
+    100048: f5Bip01 Footsteps
+    100050: f5Bip01 Head
+    100052: f5Bip01 L Calf
+    100054: f5Bip01 L Clavicle
+    100056: f5Bip01 L Finger0
+    100058: f5Bip01 L Finger01
+    100060: f5Bip01 L Finger02
+    100062: f5Bip01 L Finger1
+    100064: f5Bip01 L Finger11
+    100066: f5Bip01 L Finger12
+    100068: f5Bip01 L Finger2
+    100070: f5Bip01 L Finger21
+    100072: f5Bip01 L Finger22
+    100074: f5Bip01 L Finger3
+    100076: f5Bip01 L Finger31
+    100078: f5Bip01 L Finger32
+    100080: f5Bip01 L Finger4
+    100082: f5Bip01 L Finger41
+    100084: f5Bip01 L Finger42
+    100086: f5Bip01 L Foot
+    100088: f5Bip01 L Forearm
+    100090: f5Bip01 L Hand
+    100092: f5Bip01 L Thigh
+    100094: f5Bip01 L Toe0
+    100096: f5Bip01 L UpperArm
+    100098: f5Bip01 Neck
+    100100: f5Bip01 Pelvis
+    100102: f5Bip01 R Calf
+    100104: f5Bip01 R Clavicle
+    100106: f5Bip01 R Finger0
+    100108: f5Bip01 R Finger01
+    100110: f5Bip01 R Finger02
+    100112: f5Bip01 R Finger1
+    100114: f5Bip01 R Finger11
+    100116: f5Bip01 R Finger12
+    100118: f5Bip01 R Finger2
+    100120: f5Bip01 R Finger21
+    100122: f5Bip01 R Finger22
+    100124: f5Bip01 R Finger3
+    100126: f5Bip01 R Finger31
+    100128: f5Bip01 R Finger32
+    100130: f5Bip01 R Finger4
+    100132: f5Bip01 R Finger41
+    100134: f5Bip01 R Finger42
+    100136: f5Bip01 R Foot
+    100138: f5Bip01 R Forearm
+    100140: f5Bip01 R Hand
+    100142: f5Bip01 R Thigh
+    100144: f5Bip01 R Toe0
+    100146: f5Bip01 R UpperArm
+    100148: f5Bip01 Spine
+    100150: f5Bip01 Spine1
+    100152: f5Bip01 Spine2
+    100154: f5Bip01 Spine3
+    100156: //RootNode
+    100158: movef5
+    400000: Dummy01
+    400002: Dummy02
+    400004: Dummy03
+    400006: Dummy04
+    400008: Dummy05
+    400010: Dummy06
+    400012: Dummy07
+    400014: Dummy08
+    400016: Dummy09
+    400018: Dummy10
+    400020: Dummy11
+    400022: Dummy12
+    400024: Dummy13
+    400026: f5-arms
+    400028: f5-face
+    400030: f5-hair
+    400032: f5-legs
+    400034: f5-mesh
+    400036: f5-neiyi
+    400038: f5-shangyi
+    400040: f5-skirt
+    400042: f5-xie-L
+    400044: f5-xie-R
+    400046: f5Bip01
+    400048: f5Bip01 Footsteps
+    400050: f5Bip01 Head
+    400052: f5Bip01 L Calf
+    400054: f5Bip01 L Clavicle
+    400056: f5Bip01 L Finger0
+    400058: f5Bip01 L Finger01
+    400060: f5Bip01 L Finger02
+    400062: f5Bip01 L Finger1
+    400064: f5Bip01 L Finger11
+    400066: f5Bip01 L Finger12
+    400068: f5Bip01 L Finger2
+    400070: f5Bip01 L Finger21
+    400072: f5Bip01 L Finger22
+    400074: f5Bip01 L Finger3
+    400076: f5Bip01 L Finger31
+    400078: f5Bip01 L Finger32
+    400080: f5Bip01 L Finger4
+    400082: f5Bip01 L Finger41
+    400084: f5Bip01 L Finger42
+    400086: f5Bip01 L Foot
+    400088: f5Bip01 L Forearm
+    400090: f5Bip01 L Hand
+    400092: f5Bip01 L Thigh
+    400094: f5Bip01 L Toe0
+    400096: f5Bip01 L UpperArm
+    400098: f5Bip01 Neck
+    400100: f5Bip01 Pelvis
+    400102: f5Bip01 R Calf
+    400104: f5Bip01 R Clavicle
+    400106: f5Bip01 R Finger0
+    400108: f5Bip01 R Finger01
+    400110: f5Bip01 R Finger02
+    400112: f5Bip01 R Finger1
+    400114: f5Bip01 R Finger11
+    400116: f5Bip01 R Finger12
+    400118: f5Bip01 R Finger2
+    400120: f5Bip01 R Finger21
+    400122: f5Bip01 R Finger22
+    400124: f5Bip01 R Finger3
+    400126: f5Bip01 R Finger31
+    400128: f5Bip01 R Finger32
+    400130: f5Bip01 R Finger4
+    400132: f5Bip01 R Finger41
+    400134: f5Bip01 R Finger42
+    400136: f5Bip01 R Foot
+    400138: f5Bip01 R Forearm
+    400140: f5Bip01 R Hand
+    400142: f5Bip01 R Thigh
+    400144: f5Bip01 R Toe0
+    400146: f5Bip01 R UpperArm
+    400148: f5Bip01 Spine
+    400150: f5Bip01 Spine1
+    400152: f5Bip01 Spine2
+    400154: f5Bip01 Spine3
+    400156: //RootNode
+    400158: movef5
+    2300000: f5-hair
+    2300002: f5-arms
+    2300004: f5-face
+    2300006: f5-legs
+    2300008: f5-neiyi
+    2300010: f5-shangyi
+    2300012: f5-skirt
+    2300014: f5-xie-L
+    2300016: f5-xie-R
+    3300000: f5-hair
+    3300002: f5-arms
+    3300004: f5-face
+    3300006: f5-legs
+    3300008: f5-neiyi
+    3300010: f5-shangyi
+    3300012: f5-skirt
+    3300014: f5-xie-L
+    3300016: f5-xie-R
+    4300000: f5-hair
+    4300002: f5-xie-L
+    4300004: f5-legs
+    4300006: f5-neiyi
+    4300008: f5-arms
+    4300010: f5-shangyi
+    4300012: f5-skirt
+    4300014: f5-xie-R
+    4300016: f5-face
+    7400000: Take 001
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: f5-arms
+    13700002: f5-face
+    13700004: f5-legs
+    13700006: f5-neiyi
+    13700008: f5-shangyi
+    13700010: f5-skirt
+    13700012: f5-xie-L
+    13700014: f5-xie-R
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  userData: 

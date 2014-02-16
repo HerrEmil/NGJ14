@@ -8,6 +8,7 @@ public class GameInstaller : MonoBehaviour, IInstaller
 	public Controller controller;
 	public Laser laser;
 	public AudioSource gameMusic;
+	public AudioManager audioManager;
 
 	public void RegisterBindings(DiContainer container)
 	{
@@ -19,6 +20,7 @@ public class GameInstaller : MonoBehaviour, IInstaller
 
 		container.Bind<Controller>().AsSingle(controller);
 		container.Bind<Laser>().AsSingle(laser);
+		container.Bind<AudioManager>().AsSingle(audioManager);
 		container.Bind<AudioSource>().AsSingle(gameMusic);
 
 	    container.Bind<IEntryPoint>().AsSingle<GameController>();
