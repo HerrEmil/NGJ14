@@ -10,6 +10,8 @@ public class LaserBlowup : LaserInteractable {
 
 	[Inject]
 	public AudioManager audioManager;
+	[Inject]
+	public GameController gameController;
 
 	// Use this for initialization
 	void Start () {
@@ -31,6 +33,7 @@ public class LaserBlowup : LaserInteractable {
 				GameObject.Instantiate(FireSystem, hitInfo.point, Quaternion.identity);
 				audioManager.Play(explosionSound, hitInfo.point);
 				this.enabled = false;
+				gameController.collectedPickups.Add(this.gameObject);
 			}
 		}
 	}
