@@ -4,19 +4,28 @@ using System.Collections.Generic;
 
 public class ShowGameStatistics : MonoBehaviour {
 
-	public GUIText collectibles;
-	public Renderer backGroundText;
-	public Texture[] textures;
+	public GUIText StatusText;
+	public GUIText resultText;
+
+	public Renderer backGroundRenderer;
+	public Texture statusTexture;
+	public Texture destroyAllTexture;
+	public Texture destroySomeTexture;
+	public TextAsset destroyAllText;
+	public TextAsset destroySomeText;
+	public TextAsset destroyAllResult;
+	public TextAsset destroySomeResult;
 
 	public float transitionTime;
 
 	void Start () 
 	{
-		collectibles.text = "Destroyed Evidence: " + GameResult.result.collectedPickups.Count;
+		resultText.text = "";
+		StatusText.text = "Destroyed Evidence: " + GameResult.result.collectedPickups.Count + "/" + GameResult.result.extrasTotalCount;
 		StartCoroutine (showSlideShow());
 	}
 
-	private IEnumerator showStatistics(GUIText text)
+	private IEnumerator fadeInGuiText(GUIText text)
 	{
 
 		for (var i = 0; i < 10; i++) 
@@ -29,11 +38,15 @@ public class ShowGameStatistics : MonoBehaviour {
 
 	private IEnumerator showSlideShow()
 	{
-		foreach (var texture in textures)
-		{
-			backGroundText.material.mainTexture = texture;
-			Debug.Log(texture.name);
-			yield return new WaitForSeconds(transitionTime);
-		}
+		backGroundRenderer.material.mainTexture = statusTexture;
+		yield return new WaitForSeconds(transitionTime);
+
+		bool destroyedAll = GameResult.result.collectedPickups.Count == GameResult.result.extrasTotalCount;
+		backGroundRenderer.material.mainTexture = destroyedAll ? destroyAllTexture : destroySomeTexture;
+		StatusText.text = destroyedAll ? destroyAllText.text : destroySomeText.text;
+		yield return new WaitForSeconds(2f);
+
+		resultText.text = destroyedAll ? destroyAllResult.text : destroySomeResult.text;
+		StartCoroutine (fadeInGuiText(resultText));
 	}
 }

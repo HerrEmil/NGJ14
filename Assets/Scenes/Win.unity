@@ -164,7 +164,7 @@ GameObject:
   - 4: {fileID: 110854462}
   - 132: {fileID: 110854461}
   m_Layer: 0
-  m_Name: Destroyed Statistics
+  m_Name: Status Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -178,7 +178,7 @@ GUIText:
   m_GameObject: {fileID: 110854460}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: Destroyed Statistics
+  m_Text: Status Text
   m_Anchor: 1
   m_Alignment: 1
   m_PixelOffset: {x: 0, y: -16}
@@ -201,6 +201,56 @@ Transform:
   m_GameObject: {fileID: 110854460}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .5, y: .5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 564768115}
+--- !u!1 &229252482
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 229252484}
+  - 132: {fileID: 229252483}
+  m_Layer: 0
+  m_Name: Result Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!132 &229252483
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 229252482}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: Result Text
+  m_Anchor: 1
+  m_Alignment: 1
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 45
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!4 &229252484
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 229252482}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .5, y: .200000003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 564768115}
@@ -230,6 +280,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 229252484}
   - {fileID: 731060807}
   - {fileID: 110854462}
   m_Father: {fileID: 0}
@@ -244,12 +295,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f98ad90c5e9cfa48a5c22eeedc02006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectibles: {fileID: 110854461}
-  backGroundText: {fileID: 1658543658}
-  textures:
-  - {fileID: 2800000, guid: 868391a0153d53d4c9c4a6e2358626ff, type: 3}
-  - {fileID: 2800000, guid: e2e0f376cb16d0049a36e29e01815125, type: 3}
-  transitionTime: 5
+  StatusText: {fileID: 110854461}
+  resultText: {fileID: 229252483}
+  backGroundRenderer: {fileID: 1658543658}
+  statusTexture: {fileID: 2800000, guid: 868391a0153d53d4c9c4a6e2358626ff, type: 3}
+  destroyAllTexture: {fileID: 2800000, guid: e2e0f376cb16d0049a36e29e01815125, type: 3}
+  destroySomeTexture: {fileID: 2800000, guid: e6868958656d2d04cacf5541eb2f57a3, type: 3}
+  destroyAllText: {fileID: 4900000, guid: 18b4f49cd1dbe03489f59aabf0761003, type: 3}
+  destroySomeText: {fileID: 4900000, guid: d0bd26cd55ac4f549999abddc8c47ba9, type: 3}
+  destroyAllResult: {fileID: 4900000, guid: 3f3d8fa6b0b10f14e8997e878b639d45, type: 3}
+  destroySomeResult: {fileID: 4900000, guid: ce7c93716fef9b44eb98c71897692e2d, type: 3}
+  transitionTime: 3
 --- !u!1 &731060805
 GameObject:
   m_ObjectHideFlags: 0

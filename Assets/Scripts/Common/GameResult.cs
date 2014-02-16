@@ -12,6 +12,7 @@ public static class GameResult
 			{
 				_result = new GameController();
 				_result.collectedPickups = new List<GameObject>();
+				_result.extrasTotalCount = 0;
 			}
 			return _result;
 		}

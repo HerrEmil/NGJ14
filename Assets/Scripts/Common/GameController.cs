@@ -7,6 +7,7 @@ public class GameController : IEntryPoint, ITickable
 	public IList<GameObject> collectedPickups;
 	public bool isFinished;
 	public bool gameover;
+	public int extrasTotalCount;
 
 	public int TickPriority
 	{
