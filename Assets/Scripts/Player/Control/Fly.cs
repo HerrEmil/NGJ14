@@ -21,7 +21,7 @@ public class Fly : Controller {
 
 	// For debugging, comment out later
 	public string mousePositionString;
-	public string fingerString = "finger: NOT SET";
+	public string debugString = "finger: NOT SET";
 	int lastFingerIndex = 0;
 
 	float speed;
@@ -30,7 +30,7 @@ public class Fly : Controller {
 	[Inject]
 	Laser laser;
 
-	public bool isMobile =
+	private readonly bool isMobile =
 	#if !UNITY_EDITOR && (UNITY_ANDROID || UNITY_IPHONE)
 			true;
 	#else
@@ -51,7 +51,6 @@ public class Fly : Controller {
 		else
 		{
 			UpdateStatePC();
-			fingerString = "";
 		}
 	}
 
@@ -79,7 +78,8 @@ public class Fly : Controller {
 
 		// String for on-screen info
 //		mousePositionString = "Input.mousePosition (" + Input.mousePosition[0] + ", " + Input.mousePosition[1] + ")";
-//		accelerationString = "Device acceleration (" + Input.acceleration.x + ", " + Input.acceleration.y + ", " + Input.acceleration.z + ")";
+//      debugString = "Device acceleration (" + Input.acceleration.x + ", " + Input.acceleration.y + ", " + Input.acceleration.z + ")";
+//		debugString += "\nisMobile: "+isMobile + "(" + mx + "," + my + ")";
 
 		
 //		rigidbody.AddRelativeTorque(my * Time.deltaTime, mx * Time.deltaTime, 0f);
@@ -96,7 +96,6 @@ public class Fly : Controller {
 		//Prevent random rotation after hitting other colliders
 		rigidbody.angularVelocity = Vector3.zero;
 
-
 //		rigidbody.angularVelocity = transform.TransformDirection( -my, mx, 0f );
 
 //		transform.RotateAround(transform.right, -my * Time.deltaTime);
@@ -106,7 +105,7 @@ public class Fly : Controller {
 
 	void OnGUI () {
 //		string str = mousePositionString + "\n" + fingerString;
-		GUI.Label(new Rect(0,0,1000,1000),fingerString);
+		GUI.Label(new Rect(0,0,1000,1000),debugString);
 	}
 
 	void OnCollisionEnter (Collision c) {
@@ -126,26 +125,26 @@ public class Fly : Controller {
 			fingerCount++;
 		}
 		
-		fingerString = "";
+		debugString = "";
 		
 		if (fingerCount > 0) {
 			print ("User has " + fingerCount + " finger(s) touching the screen");
-			fingerString = "User has " + fingerCount + " finger(s) touching the screen";
+			debugString = "User has " + fingerCount + " finger(s) touching the screen";
 			
 			for (int i = 0; i < fingerCount; i++) {
 				if (Input.GetTouch(i).position[0] < (Screen.width / 2)) {
 					// Last tap is on left half???
-					fingerString = "Last tap: LEFT";
+					debugString = "Last tap: LEFT";
 					laser.gameObject.SetActive(true);
 					state = FlyState.AIM;
 					animator.SetInteger("state", 2);
 				} else {
 					// Last tap is on right half???
-					fingerString = "Last tap: RIGHT";
+					debugString = "Last tap: RIGHT";
 					state = FlyState.BOOST;
 					animator.SetInteger("state", 1);
 				}
-				fingerString += ("\n Input.GetTouch(" + i + ").position: " + Input.GetTouch(i).position);
+				debugString += ("\n Input.GetTouch(" + i + ").position: " + Input.GetTouch(i).position);
 			}
 		} else {
 			state = FlyState.NORMAL;
@@ -155,7 +154,7 @@ public class Fly : Controller {
 		
 		
 		for(int i = 0; i < fingerCount; i++) {
-			fingerString += ("\n Input.touches[" + i + "].phase: " + Input.touches[i].phase);
+			debugString += ("\n Input.touches[" + i + "].phase: " + Input.touches[i].phase);
 			if(Input.touches[i].phase == TouchPhase.Began) 
 			{ 
 				lastFingerIndex = Input.touches[i].fingerId; 
@@ -163,7 +162,7 @@ public class Fly : Controller {
 		} 
 		// Touch lastTouch = Input.touches.ToList().Find(v => v.fingerId == lastFingerIndex);
 		
-		fingerString += ("\n lastFingerIndex: " + lastFingerIndex);
+		debugString += ("\n lastFingerIndex: " + lastFingerIndex);
 	}
 
 	void UpdateStatePC()
