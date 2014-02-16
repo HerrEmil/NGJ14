@@ -117,6 +117,7 @@ public class Fly : Controller {
 
 	}
 
+
 	void UpdateStateMobile()
 	{
 		// Grab touches in current frame
