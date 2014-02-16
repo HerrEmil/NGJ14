@@ -7,7 +7,14 @@ public class GameController : IEntryPoint, ITickable
 	public IList<GameObject> collectedPickups;
 	public bool isFinished;
 	public bool gameover;
-
+	public int extrasTotalCount;
+	public readonly bool isMobile =
+	#if !UNITY_EDITOR && (UNITY_ANDROID || UNITY_IPHONE)
+		true;
+	#else
+		false;
+	#endif
+	
 	public int TickPriority
 	{
 	    get { return 0; }
