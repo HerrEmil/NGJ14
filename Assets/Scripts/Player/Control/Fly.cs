@@ -20,7 +20,9 @@ public class Fly : Controller {
 	public Animator animator;
 
 	// For debugging, comment out later
-//	public string accelerationString;
+	public string mousePositionString;
+	public string fingerString = "finger: NOT SET";
+	int lastFingerIndex = 0;
 
 	float speed;
 	FlyState state;
@@ -33,8 +35,64 @@ public class Fly : Controller {
 		speed = boostSpeed;
 	}
 
-	
-	// Update is called once per frame
+	void Update() {
+
+
+
+		// Grab touches in current frame
+		int fingerCount = 0;
+		foreach (Touch touch in Input.touches) {
+			// if (touch.phase != TouchPhase.Ended && touch.phase != TouchPhase.Canceled)
+				fingerCount++;
+		}
+
+		
+		fingerString = "";
+
+		if (fingerCount > 0) {
+			print ("User has " + fingerCount + " finger(s) touching the screen");
+			fingerString = "User has " + fingerCount + " finger(s) touching the screen";
+
+			for (int i = 0; i < fingerCount; i++) {
+				if (Input.GetTouch(i).position[0] < (Screen.width / 2)) {
+					// Last tap is on left half???
+					fingerString = "Last tap: LEFT";
+					laser.gameObject.SetActive(true);
+					state = FlyState.AIM;
+					animator.SetInteger("state", 2);
+				} else {
+					// Last tap is on right half???
+					fingerString = "Last tap: RIGHT";
+					state = FlyState.BOOST;
+					animator.SetInteger("state", 1);
+				}
+				fingerString += ("\n Input.GetTouch(" + i + ").position: " + Input.GetTouch(i).position);
+			}
+		} else {
+			state = FlyState.NORMAL;
+			animator.SetInteger("state", 0);
+		}
+
+
+
+		for(int i = 0; i < fingerCount; i++) {
+			fingerString += ("\n Input.touches[" + i + "].phase: " + Input.touches[i].phase);
+			if(Input.touches[i].phase == TouchPhase.Began) 
+			{ 
+				lastFingerIndex = Input.touches[i].fingerId; 
+			}
+		} 
+		// Touch lastTouch = Input.touches.ToList().Find(v => v.fingerId == lastFingerIndex);
+
+		fingerString += ("\n lastFingerIndex: " + lastFingerIndex);
+		
+		
+		// When click, check position
+		// If left, laser; if right, boost
+	}
+
+
+// Update is called once per frame
 	void FixedUpdate () {
 		
 		if(Input.GetKeyDown(KeyCode.A)){
@@ -66,17 +124,18 @@ public class Fly : Controller {
 		}
 
 //		transform.Translate(transform.forward * speed);
-		float mx = Input.GetAxis("Mouse X");
-		float my = Input.GetAxis("Mouse Y");
+//		float mx = Input.GetAxis("Mouse X");
+//		float my = Input.GetAxis("Mouse Y");
 
 		// Comment out mx and my above and uncomment below before building mobile version
-//		float mx = Input.acceleration.x;
-//		float my = -Input.acceleration.y;
-//		my -= 0.5f;
+		float mx = Input.acceleration.x;
+		float my = -Input.acceleration.y;
+		my -= 0.5f;
 
-		// Needed for on-screen print of acceleration
-//		Rect rect = new Rect(10, 10, 50, 50);
+		// String for on-screen info
+//		mousePositionString = "Input.mousePosition (" + Input.mousePosition[0] + ", " + Input.mousePosition[1] + ")";
 //		accelerationString = "Device acceleration (" + Input.acceleration.x + ", " + Input.acceleration.y + ", " + Input.acceleration.z + ")";
+
 		
 //		rigidbody.AddRelativeTorque(my * Time.deltaTime, mx * Time.deltaTime, 0f);
 		float angle =Vector3.Angle(transform.forward, Vector3.up);
@@ -99,10 +158,11 @@ public class Fly : Controller {
 //		transform.RotateAround(transform.up, mx * Time.deltaTime);
 
 	}
-//
-//	void OnGUI () {
-//		GUI.Label(new Rect(0,0,500,50),accelerationString);
-//	}
+
+	void OnGUI () {
+//		string str = mousePositionString + "\n" + fingerString;
+		GUI.Label(new Rect(0,0,1000,1000),fingerString);
+	}
 
 	void OnCollisionEnter (Collision c) {
 		Debug.Log(c.gameObject.name);
