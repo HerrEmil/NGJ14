@@ -1742,6 +1742,9 @@ MonoBehaviour:
   hRotationSpeed: 5
   vRotationSpeed: 5
   animator: {fileID: 1888401752}
+  mousePositionString: 
+  fingerString: 'finger: NOT SET'
+  isMobile: 0
 --- !u!54 &529957957
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2154,6 +2157,7 @@ MonoBehaviour:
   controller: {fileID: 529957956}
   laser: {fileID: 133814316}
   gameMusic: {fileID: 1518716978}
+  audioManager: {fileID: 0}
 --- !u!114 &800446712
 MonoBehaviour:
   m_ObjectHideFlags: 0
