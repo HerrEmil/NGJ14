@@ -37,7 +37,7 @@ public class Fly : Controller {
 
 	void Update() {
 
-
+#if UNITY_ANDROID
 
 		// Grab touches in current frame
 		int fingerCount = 0;
@@ -89,12 +89,14 @@ public class Fly : Controller {
 		
 		// When click, check position
 		// If left, laser; if right, boost
+#endif
 	}
 
 
 // Update is called once per frame
 	void FixedUpdate () {
-		
+
+#if UNITY_EDITOR
 		if(Input.GetKeyDown(KeyCode.A)){
 			laser.gameObject.SetActive(true);
 			state = FlyState.AIM;
@@ -108,6 +110,8 @@ public class Fly : Controller {
 			state = FlyState.BOOST;
 			animator.SetInteger("state", 1);
 		}
+
+#endif
 
 		if(state != FlyState.AIM){
 			laser.gameObject.SetActive(false);
@@ -124,13 +128,17 @@ public class Fly : Controller {
 		}
 
 //		transform.Translate(transform.forward * speed);
-//		float mx = Input.GetAxis("Mouse X");
-//		float my = Input.GetAxis("Mouse Y");
+		#if UNITY_EDITOR
+		float mx = Input.GetAxis("Mouse X");
+		float my = Input.GetAxis("Mouse Y");
+
+		#elif UNITY_ANDROID
 
 		// Comment out mx and my above and uncomment below before building mobile version
 		float mx = Input.acceleration.x;
 		float my = -Input.acceleration.y;
 		my -= 0.5f;
+		#endif
 
 		// String for on-screen info
 //		mousePositionString = "Input.mousePosition (" + Input.mousePosition[0] + ", " + Input.mousePosition[1] + ")";
