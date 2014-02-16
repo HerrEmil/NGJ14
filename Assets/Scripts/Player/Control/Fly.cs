@@ -42,7 +42,7 @@ public class Fly : Controller {
 
 	// Use this for initialization
 	void Start () {
-		speed = boostSpeed;
+		speed = normalSpeed;
 	}
 
 	void Update() {
