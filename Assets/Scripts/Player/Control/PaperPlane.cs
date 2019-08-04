@@ -19,15 +19,15 @@ public class PaperPlane : MonoBehaviour {
 		float mx = Input.GetAxis("Mouse X");
 		float my = Input.GetAxis("Mouse Y");
 
-		rigidbody.AddRelativeTorque(new Vector3(my*hSensitivity, 0, -mx*vSensitivity));
-		rigidbody.velocity = transform.forward * power;
+		GetComponent<Rigidbody>().AddRelativeTorque(new Vector3(my*hSensitivity, 0, -mx*vSensitivity));
+		GetComponent<Rigidbody>().velocity = transform.forward * power;
 
 		power -= transform.forward.y;
 		power = Mathf.Max(power, 0);
 
 		if(power < weakpower){
 			Debug.Log((weakpower-power) / weakpower);
-			rigidbody.AddRelativeTorque( (weakpower-power)/weakpower * Time.deltaTime * 35f, 0, 0);
+			GetComponent<Rigidbody>().AddRelativeTorque( (weakpower-power)/weakpower * Time.deltaTime * 35f, 0, 0);
 		}
 	}
 }

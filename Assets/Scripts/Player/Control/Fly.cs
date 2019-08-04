@@ -97,10 +97,10 @@ public class Fly : Controller {
 			transform.forward = Quaternion.AngleAxis(-my * vRotationSpeed, transform.right) * transform.forward;
 		}
 		transform.forward = (Quaternion.AngleAxis(mx * hRotationSpeed, Vector3.up) * transform.forward).normalized;
-		rigidbody.velocity = transform.forward * speed;
+		GetComponent<Rigidbody>().velocity = transform.forward * speed;
 
 		//Prevent random rotation after hitting other colliders
-		rigidbody.angularVelocity = Vector3.zero;
+		GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
 
 //		rigidbody.angularVelocity = transform.TransformDirection( -my, mx, 0f );
 

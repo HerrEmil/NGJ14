@@ -33,7 +33,7 @@ public class GameController : IEntryPoint, ITickable
 	{
 		collectedPickups = new List<GameObject>();
 		isFinished = false;
-		Screen.showCursor = false;
+		Cursor.visible = false;
 		GameResult.result = this;
 		extrasTotalCount = 5;
 	    Debug.Log("Started Game");

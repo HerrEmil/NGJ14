@@ -28,7 +28,7 @@ public class LaserBlowup : LaserInteractable {
 			bool hit = Physics.Raycast(transform.position, Vector3.down, out hitInfo);
 			Debug.Log(hitInfo);
 			if(hit){
-				rigidbody.AddExplosionForce(100f, transform.position - transform.up * 1f, 4f);
+				GetComponent<Rigidbody>().AddExplosionForce(100f, transform.position - transform.up * 1f, 4f);
 				GameObject.Instantiate(SmokeSystem, hitInfo.point, Quaternion.identity);
 				GameObject.Instantiate(FireSystem, hitInfo.point, Quaternion.identity);
 				audioManager.Play(explosionSound, hitInfo.point);
