@@ -23,10 +23,8 @@ jobs:
 
       - name: Sync to S3
         run: |
-          aws s3 sync . s3://${{ secrets.S3_BUCKET }}/ \
-            --delete \
-            --exclude ".git/*" \
-            --exclude ".github/*"
+          aws s3 sync "Non-game assets/Spy Fly builds/WebGL/" s3://${{ secrets.S3_BUCKET }}/ \
+            --delete
 
       - name: Invalidate CloudFront cache
         run: |
