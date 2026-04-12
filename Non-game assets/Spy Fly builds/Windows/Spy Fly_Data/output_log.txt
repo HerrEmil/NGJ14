@@ -1,0 +1,60 @@
+Initialize engine version: 5.6.7f1 (e80cc3114ac1)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [nvldumdx.dll 32.0.15.9597]
+    Renderer: NVIDIA GeForce RTX 3060 Ti
+    Vendor:   NVIDIA
+    VRAM:     8024 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=0 INTZ=1 NULL=1 RESZ=0 SlowINTZ=0 ATOC=1 BC4=1 BC5=1
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\hello\Documents\GitHub\NGJ14\Non-game assets\Spy Fly builds\Windows\Spy Fly_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\hello\Documents\GitHub\NGJ14\Non-game assets\Spy Fly builds\Windows\Spy Fly_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\hello\Documents\GitHub\NGJ14\Non-game assets\Spy Fly builds\Windows\Spy Fly_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\hello\Documents\GitHub\NGJ14\Non-game assets\Spy Fly builds\Windows\Spy Fly_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\hello\Documents\GitHub\NGJ14\Non-game assets\Spy Fly builds\Windows\Spy Fly_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\hello\Documents\GitHub\NGJ14\Non-game assets\Spy Fly builds\Windows\Spy Fly_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\hello\Documents\GitHub\NGJ14\Non-game assets\Spy Fly builds\Windows\Spy Fly_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\hello\Documents\GitHub\NGJ14\Non-game assets\Spy Fly builds\Windows\Spy Fly_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.431 seconds
+Platform assembly: C:\Users\hello\Documents\GitHub\NGJ14\Non-game assets\Spy Fly builds\Windows\Spy Fly_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\hello\Documents\GitHub\NGJ14\Non-game assets\Spy Fly builds\Windows\Spy Fly_Data\Managed\System.dll (this message is harmless)
+desktop: 3840x2160 60Hz; virtual: 3840x2160 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.594200 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.206900 ms
+CompositionRoot: Finished Injecting Dependencies
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Initializing dependency root
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Initializing entry point with type 'ModestTree.Zenject.KernelInitializer'
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Initializing entry point with type 'GameController'
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 4792.
+Total: 0.687000 ms (FindLiveObjects: 0.150500 ms CreateObjectMapping: 0.026500 ms MarkObjects: 0.400600 ms  DeleteObjects: 0.108800 ms)
+
+Removed task 'ModestTree.Zenject.EntryPointInitializer'
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Setting up 8 worker threads for Enlighten.
+  Thread -> id: 22e8 -> priority: 1 
+  Thread -> id: 1db4 -> priority: 1 
+  Thread -> id: 19cc -> priority: 1 
+  Thread -> id: 27a8 -> priority: 1 
+  Thread -> id: 3de4 -> priority: 1 
+  Thread -> id: b7c -> priority: 1 
+  Thread -> id: 3ac8 -> priority: 1 
+  Thread -> id: 187c -> priority: 1 
