@@ -4,13 +4,26 @@ using System.Collections;
 public class LoadingBar : MonoBehaviour {
 
 	public float width;
+	public float duration = 3f;
 
-	// Use this for initialization
 	void Start () {
-		iTween.ScaleTo(gameObject, new Vector3(transform.localScale.x, transform.localScale.y, width), 3f);
+		StartCoroutine(AnimateWidth());
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+	private IEnumerator AnimateWidth()
+	{
+		Vector3 startScale = transform.localScale;
+		Vector3 targetScale = new Vector3(startScale.x, startScale.y, width);
+		float elapsed = 0f;
+
+		while (elapsed < duration)
+		{
+			elapsed += Time.deltaTime;
+			float progress = duration <= 0f ? 1f : Mathf.Clamp01(elapsed / duration);
+			transform.localScale = Vector3.Lerp(startScale, targetScale, progress);
+			yield return null;
+		}
+
+		transform.localScale = targetScale;
 	}
 }

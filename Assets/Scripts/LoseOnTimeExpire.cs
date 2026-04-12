@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 using ModestTree.Zenject;
+using UnityEngine.UI;
 
 public class LoseOnTimeExpire : MonoBehaviour 
 {
 	public float timeLimit;
-	public GUIText countDownGui;
+	public Text countDownGui;
 
 	public float remainingTime {get; private set;}
 
@@ -14,7 +15,27 @@ public class LoseOnTimeExpire : MonoBehaviour
 
 	void Start()
 	{
+		EnsureCountdownReference();
 		remainingTime = timeLimit;
+	}
+
+	private void EnsureCountdownReference()
+	{
+		if (countDownGui != null)
+		{
+			return;
+		}
+
+		Canvas canvas = LegacyUiTextFactory.EnsureCanvas();
+		countDownGui = LegacyUiTextFactory.CreateText(
+			"Countdown",
+			canvas.transform,
+			new Vector2(0f, 1f),
+			new Vector2(0f, 1f),
+			new Vector2(220f, -40f),
+			28,
+			TextAnchor.MiddleLeft,
+			Color.white);
 	}
 
 	void FixedUpdate()

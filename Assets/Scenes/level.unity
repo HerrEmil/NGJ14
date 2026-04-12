@@ -21723,7 +21723,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 497588228}
-  - 132: {fileID: 497588227}
   m_Layer: 0
   m_Name: Timer
   m_TagString: Untagged
@@ -21731,29 +21730,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!132 &497588227
-GUIText:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 497588226}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Text: Gui Text
-  m_Anchor: 2
-  m_Alignment: 2
-  m_PixelOffset: {x: 0, y: 0}
-  m_LineSpacing: 1
-  m_TabSize: 4
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-  m_Material: {fileID: 0}
-  m_FontSize: 32
-  m_FontStyle: 0
-  m_Color:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_PixelCorrect: 1
-  m_RichText: 1
 --- !u!4 &497588228
 Transform:
   m_ObjectHideFlags: 0
@@ -39226,7 +39202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeLimit: 120
-  countDownGui: {fileID: 497588227}
+  countDownGui: {fileID: 0}
 --- !u!1 &882784550
 GameObject:
   m_ObjectHideFlags: 0
@@ -79571,8 +79547,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1760722152}
   - 20: {fileID: 1760722157}
-  - 92: {fileID: 1760722156}
-  - 124: {fileID: 1760722155}
   - 81: {fileID: 1760722154}
   - 45: {fileID: 1760722153}
   m_Layer: 0
@@ -79606,22 +79580,6 @@ Skybox:
 AudioListener:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 8100000, guid: b4a60fa67cce80c4e80d8c8551f7fa39,
-    type: 2}
-  m_PrefabInternal: {fileID: 215080845}
-  m_GameObject: {fileID: 1760722151}
-  m_Enabled: 1
---- !u!124 &1760722155
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 12400000, guid: b4a60fa67cce80c4e80d8c8551f7fa39,
-    type: 2}
-  m_PrefabInternal: {fileID: 215080845}
-  m_GameObject: {fileID: 1760722151}
-  m_Enabled: 1
---- !u!92 &1760722156
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9200000, guid: b4a60fa67cce80c4e80d8c8551f7fa39,
     type: 2}
   m_PrefabInternal: {fileID: 215080845}
   m_GameObject: {fileID: 1760722151}

@@ -2,14 +2,22 @@
 # Unity generated #
 # =============== #
 Temp/
+temp/
 Obj/
+obj/
 UnityGenerated/
 Library/
+Logs/
+UserSettings/
+MemoryCaptures/
+Recordings/
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
 ExportedObj/
+.vs/
+.vscode/
 *.svd
 *.userprefs
 *.csproj
@@ -19,6 +27,8 @@ ExportedObj/
 *.user
 *.unityproj
 *.booproj
+*.tmp
+*.stacktrace
 
 # ============ #
 # OS generated #

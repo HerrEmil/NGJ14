@@ -111,8 +111,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 471140273}
   - 20: {fileID: 471140272}
-  - 92: {fileID: 471140271}
-  - 124: {fileID: 471140270}
   - 81: {fileID: 471140269}
   - 114: {fileID: 471140274}
   m_Layer: 0
@@ -126,22 +124,6 @@ GameObject:
 AudioListener:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 8100000, guid: 7a13a1acfa002074f9c1597494ef9161,
-    type: 2}
-  m_PrefabInternal: {fileID: 781541308}
-  m_GameObject: {fileID: 471140268}
-  m_Enabled: 1
---- !u!124 &471140270
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 12400000, guid: 7a13a1acfa002074f9c1597494ef9161,
-    type: 2}
-  m_PrefabInternal: {fileID: 781541308}
-  m_GameObject: {fileID: 471140268}
-  m_Enabled: 1
---- !u!92 &471140271
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9200000, guid: 7a13a1acfa002074f9c1597494ef9161,
     type: 2}
   m_PrefabInternal: {fileID: 781541308}
   m_GameObject: {fileID: 471140268}

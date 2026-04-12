@@ -1523,8 +1523,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1781898185}
   - 20: {fileID: 1726758819}
-  - 92: {fileID: 1726758818}
-  - 124: {fileID: 1726758817}
   - 81: {fileID: 1726758816}
   - 45: {fileID: 1726758815}
   m_Layer: 0
@@ -2655,22 +2653,6 @@ Skybox:
 AudioListener:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 8100000, guid: b4a60fa67cce80c4e80d8c8551f7fa39,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 299342020}
-  m_Enabled: 1
---- !u!124 &1726758817
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 12400000, guid: b4a60fa67cce80c4e80d8c8551f7fa39,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 299342020}
-  m_Enabled: 1
---- !u!92 &1726758818
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9200000, guid: b4a60fa67cce80c4e80d8c8551f7fa39,
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 299342020}

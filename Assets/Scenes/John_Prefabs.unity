@@ -1893,7 +1893,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 663610150}
-  - 132: {fileID: 663610149}
   m_Layer: 0
   m_Name: TimeLimitGui
   m_TagString: Untagged
@@ -1901,29 +1900,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!132 &663610149
-GUIText:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 663610148}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Text: Time Limit
-  m_Anchor: 0
-  m_Alignment: 0
-  m_PixelOffset: {x: 0, y: 0}
-  m_LineSpacing: 1
-  m_TabSize: 4
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-  m_Material: {fileID: 0}
-  m_FontSize: 0
-  m_FontStyle: 0
-  m_Color:
-    serializedVersion: 2
-    rgba: 4278190080
-  m_PixelCorrect: 1
-  m_RichText: 1
 --- !u!4 &663610150
 Transform:
   m_ObjectHideFlags: 0
@@ -2232,8 +2208,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 974298033}
   - 20: {fileID: 974298038}
-  - 92: {fileID: 974298037}
-  - 124: {fileID: 974298036}
   - 81: {fileID: 974298035}
   - 45: {fileID: 974298034}
   m_Layer: 0
@@ -2267,22 +2241,6 @@ Skybox:
 AudioListener:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 8100000, guid: b4a60fa67cce80c4e80d8c8551f7fa39,
-    type: 2}
-  m_PrefabInternal: {fileID: 265233854}
-  m_GameObject: {fileID: 974298032}
-  m_Enabled: 1
---- !u!124 &974298036
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 12400000, guid: b4a60fa67cce80c4e80d8c8551f7fa39,
-    type: 2}
-  m_PrefabInternal: {fileID: 265233854}
-  m_GameObject: {fileID: 974298032}
-  m_Enabled: 1
---- !u!92 &974298037
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9200000, guid: b4a60fa67cce80c4e80d8c8551f7fa39,
     type: 2}
   m_PrefabInternal: {fileID: 265233854}
   m_GameObject: {fileID: 974298032}

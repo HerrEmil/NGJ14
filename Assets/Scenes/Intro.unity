@@ -83,8 +83,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 20580965}
   - 20: {fileID: 20580964}
-  - 92: {fileID: 20580963}
-  - 124: {fileID: 20580962}
   - 81: {fileID: 20580961}
   m_Layer: 0
   m_Name: Main Camera
@@ -95,20 +93,6 @@ GameObject:
   m_IsActive: 1
 --- !u!81 &20580961
 AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 20580960}
-  m_Enabled: 1
---- !u!124 &20580962
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 20580960}
-  m_Enabled: 1
---- !u!92 &20580963
-Behaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
