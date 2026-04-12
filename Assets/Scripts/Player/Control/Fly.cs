@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using ModestTree.Zenject;
+using UnityEngine.SceneManagement;
 
 
 enum FlyState {
@@ -67,15 +68,18 @@ public class Fly : Controller {
 
 		if(state == FlyState.BOOST){
 			speed = Mathf.Lerp(speed, boostSpeed, Time.deltaTime);
-			system.enableEmission = true;
+			var emission = system.emission;
+			emission.enabled = true;
 		}
 		else if(state == FlyState.NORMAL){
 			speed = Mathf.Lerp(speed, normalSpeed, Time.deltaTime);
-			system.enableEmission = false;
+			var emission = system.emission;
+			emission.enabled = false;
 		}
 		else if(state == FlyState.AIM){
 			speed = Mathf.Lerp(speed, 0, Time.deltaTime*3);
-			system.enableEmission = false;
+			var emission = system.emission;
+			emission.enabled = false;
 		}
 
 //		transform.Translate(transform.forward * speed);
@@ -120,7 +124,7 @@ public class Fly : Controller {
 		Vector3 reflected = Vector3.Reflect(transform.forward, c.contacts[0].normal);
 		transform.forward = (Quaternion.AngleAxis(Vector3.Angle(transform.forward, reflected), Vector3.Cross(transform.forward, reflected)) * transform.forward).normalized;
 		if(++collisionCount > 10){
-			Application.LoadLevel("Lose");
+			SceneManager.LoadScene("Lose");
 		}
 	}
 

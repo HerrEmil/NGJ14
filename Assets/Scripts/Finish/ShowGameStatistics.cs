@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class ShowGameStatistics : MonoBehaviour {
 
@@ -54,6 +55,6 @@ public class ShowGameStatistics : MonoBehaviour {
 			yield return new WaitForSeconds(0.1f);
 		}
 
-		Application.LoadLevel(0);
+		SceneManager.LoadScene(0);
 	}
 }

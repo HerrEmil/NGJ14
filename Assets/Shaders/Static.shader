@@ -18,7 +18,7 @@
 		};
 
 		void surf (Input IN, inout SurfaceOutput o) {
-			half4 c = tex2D (_MainTex, IN.uv_MainTex + float2(_SinTime.x*_CosTime.y*100f, _SinTime.z*_CosTime.w*200f));
+			half4 c = tex2D (_MainTex, IN.uv_MainTex + float2(_SinTime.x * _CosTime.y * 100.0, _SinTime.z * _CosTime.w * 200.0));
 			o.Albedo = c.rgb;
 			o.Alpha = c.a;
 		}

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class ShowIntro : MonoBehaviour {
 
@@ -16,6 +17,6 @@ public class ShowIntro : MonoBehaviour {
 			yield return new WaitForSeconds(0.1f);
 		}
 		
-		Application.LoadLevel("level");
+		SceneManager.LoadScene("level");
 	}
 }

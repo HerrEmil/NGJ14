@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using ModestTree.Zenject;
+using UnityEngine.SceneManagement;
 
 public class GameController : IEntryPoint, ITickable
 {
@@ -36,18 +37,17 @@ public class GameController : IEntryPoint, ITickable
 		Cursor.visible = false;
 		GameResult.result = this;
 		extrasTotalCount = 5;
-	    Debug.Log("Started Game");
 	}
 
 	public void Tick()
 	{
 		if (gameover)
 		{
-			Application.LoadLevel("Lose");
+			SceneManager.LoadScene("Lose");
 		}
 		else if (isFinished)
 		{
-			Application.LoadLevel("Win");
+			SceneManager.LoadScene("Win");
 		}
 	}
 

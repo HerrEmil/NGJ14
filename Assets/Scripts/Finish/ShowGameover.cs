@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class ShowGameover : MonoBehaviour {
 	
@@ -24,6 +25,6 @@ public class ShowGameover : MonoBehaviour {
 			yield return new WaitForSeconds(0.1f);
 		}
 		
-		Application.LoadLevel(0);
+		SceneManager.LoadScene(0);
 	}
 }
