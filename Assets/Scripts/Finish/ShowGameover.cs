@@ -42,9 +42,9 @@ public class ShowGameover : MonoBehaviour {
 			yield return new WaitForSeconds(.1f);
 		}
 
-		while (GameResult.result.isMobile ? Input.touches.Length == 0 : !Input.GetButton("Fire1"))
+		while (!GameInput.IsContinuePressed(GameResult.result.isMobile))
 		{
-			yield return new WaitForSeconds(0.1f);
+			yield return null;
 		}
 		
 		SceneManager.LoadScene(0);

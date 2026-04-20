@@ -1,10 +1,10 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace ModestTree.Zenject
 {
-    // Note: this corresponds to the values expected in
-    // Input.GetMouseButtonDown() and similar methods
+    // Note: this corresponds to the values expected by Mouse.current buttons
     public enum MouseButtons
     {
         Left,
@@ -30,7 +30,7 @@ namespace ModestTree.Zenject
 
         public event Action MouseMove = delegate {};
 
-        Vector3 _lastMousePosition;
+        Vector2 _lastMousePosition;
 
         [InjectNamed("TickPriority")]
         [InjectOptional]
@@ -52,27 +52,60 @@ namespace ModestTree.Zenject
 
         public void Tick()
         {
-            if (Input.GetMouseButtonDown((int)MouseButtons.Left))
+            var mouse = Mouse.current;
+            if (mouse == null)
+            {
+                #if ENABLE_LEGACY_INPUT_MANAGER
+                if (UnityEngine.Input.GetMouseButtonDown((int)MouseButtons.Left))
+                {
+                    LeftMouseButtonDown();
+                }
+                else if (UnityEngine.Input.GetMouseButtonUp((int)MouseButtons.Left))
+                {
+                    LeftMouseButtonUp();
+                }
+
+                if (UnityEngine.Input.GetMouseButtonDown((int)MouseButtons.Right))
+                {
+                    RightMouseButtonDown();
+                }
+                else if (UnityEngine.Input.GetMouseButtonUp((int)MouseButtons.Right))
+                {
+                    RightMouseButtonUp();
+                }
+
+                var legacyMousePosition = (Vector2)UnityEngine.Input.mousePosition;
+                if (_lastMousePosition != legacyMousePosition)
+                {
+                    _lastMousePosition = legacyMousePosition;
+                    MouseMove();
+                }
+                #endif
+                return;
+            }
+
+            if (mouse.leftButton.wasPressedThisFrame)
             {
                 LeftMouseButtonDown();
             }
-            else if (Input.GetMouseButtonUp((int)MouseButtons.Left))
+            else if (mouse.leftButton.wasReleasedThisFrame)
             {
                 LeftMouseButtonUp();
             }
 
-            if (Input.GetMouseButtonDown((int)MouseButtons.Right))
+            if (mouse.rightButton.wasPressedThisFrame)
             {
                 RightMouseButtonDown();
             }
-            else if (Input.GetMouseButtonUp((int)MouseButtons.Right))
+            else if (mouse.rightButton.wasReleasedThisFrame)
             {
                 RightMouseButtonUp();
             }
 
-            if (_lastMousePosition != Input.mousePosition)
+            var mousePosition = mouse.position.ReadValue();
+            if (_lastMousePosition != mousePosition)
             {
-                _lastMousePosition = Input.mousePosition;
+                _lastMousePosition = mousePosition;
                 MouseMove();
             }
         }

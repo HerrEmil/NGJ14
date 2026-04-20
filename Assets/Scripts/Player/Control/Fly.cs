@@ -2,6 +2,7 @@
 using System.Collections;
 using ModestTree.Zenject;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 
 enum FlyState {
@@ -83,8 +84,10 @@ public class Fly : Controller {
 		}
 
 //		transform.Translate(transform.forward * speed);
-		float mx = isMobile ? Input.acceleration.x : Input.GetAxis("Mouse X");
-		float my = isMobile ? -Input.acceleration.y - 0.5f : Input.GetAxis("Mouse Y");
+		Vector2 lookInput = isMobile ? Vector2.zero : GameInput.ReadMouseLookAxis();
+		Vector3 acceleration = isMobile ? GameInput.ReadAcceleration() : Vector3.zero;
+		float mx = isMobile ? acceleration.x : lookInput.x;
+		float my = isMobile ? -acceleration.y - 0.5f : lookInput.y;
 
 		// String for on-screen info
 //		mousePositionString = "Input.mousePosition (" + Input.mousePosition[0] + ", " + Input.mousePosition[1] + ")";
@@ -131,11 +134,7 @@ public class Fly : Controller {
 	void UpdateStateMobile()
 	{
 		// Grab touches in current frame
-		int fingerCount = 0;
-		foreach (Touch touch in Input.touches) {
-			// if (touch.phase != TouchPhase.Ended && touch.phase != TouchPhase.Canceled)
-			fingerCount++;
-		}
+		int fingerCount = GameInput.TouchCount;
 		
 		debugString = "";
 		
@@ -144,7 +143,8 @@ public class Fly : Controller {
 			debugString = "User has " + fingerCount + " finger(s) touching the screen";
 			
 			for (int i = 0; i < fingerCount; i++) {
-				if (Input.GetTouch(i).position[0] < (Screen.width / 2)) {
+				GameTouchData touch = GameInput.GetTouch(i);
+				if (touch.Position.x < (Screen.width / 2f)) {
 					// Last tap is on left half???
 					debugString = "Last tap: LEFT";
 					laser.gameObject.SetActive(true);
@@ -156,7 +156,7 @@ public class Fly : Controller {
 					state = FlyState.BOOST;
 					animator.SetInteger("state", 1);
 				}
-				debugString += ("\n Input.GetTouch(" + i + ").position: " + Input.GetTouch(i).position);
+				debugString += ("\n Touch " + i + ".position: " + touch.Position);
 			}
 		} else {
 			state = FlyState.NORMAL;
@@ -166,10 +166,11 @@ public class Fly : Controller {
 		
 		
 		for(int i = 0; i < fingerCount; i++) {
-			debugString += ("\n Input.touches[" + i + "].phase: " + Input.touches[i].phase);
-			if(Input.touches[i].phase == TouchPhase.Began) 
+			GameTouchData touch = GameInput.GetTouch(i);
+			debugString += ("\n Touch " + i + ".phase: " + touch.Phase);
+			if(touch.Phase == GameTouchPhase.Began) 
 			{ 
-				lastFingerIndex = Input.touches[i].fingerId; 
+				lastFingerIndex = touch.TouchId; 
 			}
 		} 
 		// Touch lastTouch = Input.touches.ToList().Find(v => v.fingerId == lastFingerIndex);
@@ -179,16 +180,16 @@ public class Fly : Controller {
 
 	void UpdateStatePC()
 	{
-		if(Input.GetKeyDown(KeyCode.A)){
+		if(GameInput.WasKeyboardKeyPressed(Key.A, KeyCode.A)){
 			laser.gameObject.SetActive(true);
 			state = FlyState.AIM;
 			animator.SetInteger("state", 2);
 		}
-		else if(Input.GetKeyDown(KeyCode.S)){
+		else if(GameInput.WasKeyboardKeyPressed(Key.S, KeyCode.S)){
 			state = FlyState.NORMAL;
 			animator.SetInteger("state", 0);
 		}
-		else if(Input.GetKeyDown(KeyCode.D)){
+		else if(GameInput.WasKeyboardKeyPressed(Key.D, KeyCode.D)){
 			state = FlyState.BOOST;
 			animator.SetInteger("state", 1);
 		}

@@ -16,8 +16,9 @@ public class PaperPlane : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		float mx = Input.GetAxis("Mouse X");
-		float my = Input.GetAxis("Mouse Y");
+		Vector2 lookInput = GameInput.ReadMouseLookAxis();
+		float mx = lookInput.x;
+		float my = lookInput.y;
 
 		GetComponent<Rigidbody>().AddRelativeTorque(new Vector3(my*hSensitivity, 0, -mx*vSensitivity));
 		GetComponent<Rigidbody>().linearVelocity = transform.forward * power;
