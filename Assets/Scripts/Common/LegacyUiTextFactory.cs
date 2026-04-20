@@ -7,7 +7,7 @@ public static class LegacyUiTextFactory
 
 	public static Canvas EnsureCanvas(string name = "Legacy UI Canvas")
 	{
-		Canvas canvas = Object.FindObjectOfType<Canvas>();
+		Canvas canvas = Object.FindFirstObjectByType<Canvas>();
 		if (canvas != null)
 		{
 			return canvas;

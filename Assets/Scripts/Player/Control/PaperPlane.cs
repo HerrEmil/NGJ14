@@ -20,7 +20,7 @@ public class PaperPlane : MonoBehaviour {
 		float my = Input.GetAxis("Mouse Y");
 
 		GetComponent<Rigidbody>().AddRelativeTorque(new Vector3(my*hSensitivity, 0, -mx*vSensitivity));
-		GetComponent<Rigidbody>().velocity = transform.forward * power;
+		GetComponent<Rigidbody>().linearVelocity = transform.forward * power;
 
 		power -= transform.forward.y;
 		power = Mathf.Max(power, 0);
